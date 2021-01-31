@@ -32,6 +32,8 @@ public class HumanController : InputBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        cam = GameObject.Instantiate(cam, transform.TransformPoint(Vector3.forward) , transform.rotation);
+        
         rb = GetComponent<Rigidbody>();
         McGuffin = GameObject.FindWithTag("mcguffin");
         animationController = model.GetComponent<Animator>();   
