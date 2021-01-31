@@ -5,6 +5,7 @@ using Mirror;
 
 public class PlayerNetworkManager : NetworkBehaviour
 {
+    public Camera playerCameraPrefab;
     [Tooltip("A list of gameobject body parts that will be set inactive to the local player.")]
     public List<GameObject> playerBodyParts;
 
@@ -24,7 +25,6 @@ public class PlayerNetworkManager : NetworkBehaviour
         DontDestroyOnLoad(this.gameObject);
         if (GetComponent<NetworkIdentity>().isLocalPlayer)
         {
-            playerCamera = GetComponent<PlayerManager>().playerCamera.gameObject;
             enableLocalPlayerInput();
             disableLocalBodyParts();
 
@@ -45,6 +45,8 @@ public class PlayerNetworkManager : NetworkBehaviour
          * Enable character input controllers here, for example:
          * GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
          */
+         
+        Camera mainCamera;
         HumanController humanController = GetComponent<HumanController>();
         GhostController ghostController = GetComponent<GhostController>();
         if (humanController == null && ghostController == null)
@@ -55,11 +57,19 @@ public class PlayerNetworkManager : NetworkBehaviour
         {
             if (humanController != null)
             {
+                mainCamera = GameObject.Instantiate(playerCameraPrefab, transform.TransformPoint(Vector3.forward) , transform.rotation);
+                GetComponent<PlayerManager>().playerCamera = mainCamera;
+                playerCamera = GetComponent<PlayerManager>().playerCamera.gameObject;
+                humanController.cam = mainCamera;
+                GetComponent<PlayerNetworkCommands>().setPlayerCameraTransform(mainCamera.transform);
                 humanController.enabled = true;
             }
 
             if (ghostController != null)
             {
+                mainCamera = ghostController.GhostEyes;
+                GetComponent<PlayerManager>().playerCamera = mainCamera;
+                playerCamera = GetComponent<PlayerManager>().playerCamera.gameObject;
                 ghostController.enabled = true;
             }
         }

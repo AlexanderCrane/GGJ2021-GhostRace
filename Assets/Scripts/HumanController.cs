@@ -33,8 +33,9 @@ public class HumanController : InputBehaviour
     protected override void Awake()
     {
         base.Awake();
-        cam = GameObject.Instantiate(cam, transform.TransformPoint(Vector3.forward) , transform.rotation);
-        GetComponent<PlayerManager>().playerCamera = cam;
+        // Debug.Log("instantiating camera");
+        // cam = GameObject.Instantiate(cam, transform.TransformPoint(Vector3.forward) , transform.rotation);
+        // GetComponent<PlayerManager>().playerCamera = cam;
         
         rb = GetComponent<Rigidbody>();
         McGuffin = GameObject.FindWithTag("mcguffin");
