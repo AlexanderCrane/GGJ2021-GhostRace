@@ -23,13 +23,9 @@ public class HumanController : MonoBehaviour
 
     public GameObject Projectile;
     
-    // private Vector3 offset;
-    // [Space]
-    // [Range(0f, 10f)]
-    // public float turnSpeed = 5f;
-    // [Range(0.01f, 1.0f)]
-    // public float SmoothFactor = 0.5f;
-
+    float lookX = 0f;
+    float lookY = 0f;
+    float xRotation = 0f;
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -74,8 +70,6 @@ public class HumanController : MonoBehaviour
     void Start()
     {
         McGuffin = GameObject.FindWithTag("mcguffin");
-
-        // offset = cam.transform.position - transform.position;
     }
 
     // Update is called once per frame
@@ -87,19 +81,18 @@ public class HumanController : MonoBehaviour
             transform.Translate(m, Space.Self);
         }
  
-        if(Mathf.Abs(CameraRotation.x) > 0.0f || Mathf.Abs(CameraRotation.y) > 0.0f)
-        {
-            cam.transform.RotateAround(transform.position, Vector3.up, CameraRotation.x * CameraRotateSpeed);
+        cam.transform.RotateAround(transform.position, Vector3.up, CameraRotation.x * CameraRotateSpeed);
+        
+        // var x = lookX * 10 * Time.deltaTime;
+        // var y = lookY * 10 * Time.deltaTime;
 
-            // offset = Quaternion.AngleAxis(CameraRotation.x * turnSpeed, Vector3.up) * Quaternion.AngleAxis(CameraRotation.y * turnSpeed, Vector3.right) * offset;
-            // Vector3 newPos = transform.position + offset;
-            // cam.transform.position = Vector3.Lerp(transform.position, newPos, SmoothFactor);
-            // transform.position = player.position + offset;
-            // cam.transform.LookAt(transform.position);
-        }
+        // xRotation -= lookY;
+        // xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+        // GhostEyes.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        // transform.Rotate(Vector3.up * lookX);
         
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, cam.transform.localEulerAngles.y, transform.localEulerAngles.z);
-
 
         Vector3 cameraTargetPosition = transform.TransformPoint(new Vector3(1f, 1.25f, -2.7f));
 
@@ -192,31 +185,13 @@ public class HumanController : MonoBehaviour
 
     void Move(Vector2 movement)
     {
-        // if(Mathf.Abs(movement.x) > 0.0f || Mathf.Abs(movement.y) > 0.0f)
-        // {
-            // Vector3 m = new Vector3(movement.x, 0, movement.y) * 30 * Time.deltaTime;
-            // transform.Translate(m, Space.World);
-        // }
-        // if(Mathf.Abs(movement.y) > Mathf.Abs(movement.x)){
 
-        // }
-        
-        // if(Mathf.Abs(movement.x) > Mathf.Abs(movement.y)){
-
-        // }
     }
 
     void Look(Vector2 looking)
     {
-        // Debug.Log(looking);
-
-        if(Mathf.Abs(looking.y) > Mathf.Abs(looking.x)){
-
-        }
-        
-        if(Mathf.Abs(looking.x) > Mathf.Abs(looking.y)){
-
-        }
+        lookX = looking.x;
+        lookY = looking.y;
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -255,8 +230,6 @@ public class HumanController : MonoBehaviour
         // bullet.GetComponent<Rigidbody>().AddForce(0,0,1000);
         // bullet.GetComponent<Rigidbody>().velocity = cam.transform.forward * 50;
 
-        float x = Screen.width / 2;
-        float y = Screen.height / 2;
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
         RaycastHit hit ;
         Vector3 targetPoint ;
@@ -266,7 +239,7 @@ public class HumanController : MonoBehaviour
         }
         else
         {
-            targetPoint = ray.GetPoint( 100 ) ; // You may need to change this value according to your needs
+            targetPoint = ray.GetPoint( 1000 ) ; // You may need to change this value according to your needs
         }
         // Create the bullet and give it a velocity according to the target point computed before
         GameObject bullet = GameObject.Instantiate(Projectile, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
