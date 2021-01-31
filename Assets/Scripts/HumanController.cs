@@ -10,6 +10,7 @@ public class HumanController : InputBehaviour
     public GameObject SpawnPoint;
     public GameObject Projectile;
     public GameObject model;
+    public ParticleSystem deathAura;
 
     //Private
     Rigidbody rb;
@@ -33,8 +34,10 @@ public class HumanController : InputBehaviour
     protected override void Awake()
     {
         base.Awake();
-        cam = GameObject.Instantiate(cam, transform.TransformPoint(Vector3.forward) , transform.rotation);
-        GetComponent<PlayerManager>().playerCamera = cam;
+        deathAura.gameObject.SetActive(false);
+        // Debug.Log("instantiating camera");
+        // cam = GameObject.Instantiate(cam, transform.TransformPoint(Vector3.forward) , transform.rotation);
+        // GetComponent<PlayerManager>().playerCamera = cam;
         
         rb = GetComponent<Rigidbody>();
         McGuffin = GameObject.FindWithTag("mcguffin");
@@ -167,7 +170,8 @@ public class HumanController : InputBehaviour
     {
         Debug.Log("Took damage");
         animationController.SetTrigger("GetHit");
-
+        deathAura.gameObject.SetActive(true);
+        deathAura.Play();
         if(McGuffinEquipped)
         {
             McGuffin.transform.SetParent(null);

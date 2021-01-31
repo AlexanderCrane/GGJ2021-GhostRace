@@ -11,10 +11,6 @@ public class PlayerNetworkCommands : NetworkBehaviour
 {
     private Transform playerCamera;
 
-    private void Start() {
-        playerCamera = GetComponent<PlayerManager>().playerCamera.transform;
-    }
-
     /// <summary>
     /// Call this function from a player script, and it will execute on the server.
     /// This is unsafe.
@@ -33,6 +29,11 @@ public class PlayerNetworkCommands : NetworkBehaviour
                 // hit.transform.GetComponent<Door>().RpcOpenDoor);
             }
         }
+    }
+
+    public void setPlayerCameraTransform(Transform cameraTransform)
+    {
+        playerCamera = cameraTransform;
     }
 
     /// <summary>
