@@ -33,7 +33,7 @@ public class InputBehaviour : MonoBehaviour
         controls.Player.RightBumper.canceled += _ => RightBumperReleased();
         controls.Player.LeftTrigger.performed += _ => LeftTriggerPressed();
         controls.Player.RightTrigger.performed += _ => RightTriggerPressed();
-        controls.Player.Confirm.performed += _ => SouthButtonPressed();
+        // controls.Player.Confirm.performed += _ => SouthButtonPressed();
         controls.Player.Start.performed += _ => StartPressed();
         controls.Player.Back.performed += _ => EastButtonPressed();
         controls.Player.LeftStick.performed += _ => LeftStickPressed();

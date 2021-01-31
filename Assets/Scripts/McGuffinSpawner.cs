@@ -12,7 +12,8 @@ public class McGuffinSpawner : MonoBehaviour
     void Start()
     {
         chosenPoint = SpawnPoints[Random.Range(0,SpawnPoints.Length)].transform.position;
-        McGuffin.transform.position = chosenPoint;
+        GameObject McGuffinPickup = GameObject.Instantiate(McGuffin, transform.TransformPoint(Vector3.forward * 1.1f) , transform.rotation);
+        McGuffinPickup.transform.position = chosenPoint;
     }
 
     // Update is called once per frame

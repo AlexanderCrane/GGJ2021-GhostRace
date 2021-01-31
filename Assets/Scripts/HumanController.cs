@@ -16,7 +16,7 @@ public class HumanController : InputBehaviour
     Rigidbody rb;
     bool grounded;
     float MoveSpeed = 5f;
-    float CameraRotateSpeed = 3f;
+    float CameraRotateSpeed = 1f;
     float CameraFollowSpeed = 0.3f;
     Vector2 CameraRotation;
     private Vector3 velocity = Vector3.zero;
@@ -102,7 +102,7 @@ public class HumanController : InputBehaviour
         Debug.Log("Confirm/South button pressed");
         if(grounded)
         {
-            rb.AddForce(new Vector3(0,200f,0));
+            rb.AddForce(new Vector3(0,300f,0));
         }
     }
 
