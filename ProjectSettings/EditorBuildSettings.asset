@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/JohnTest/Scene/MirrorTestScene.unity
-    guid: 8787759cb627fc149b765b413a035f29
+    path: Assets/Scenes/TitleScreen.unity
+    guid: 204596a72ebecf04e964934d01a32da5
   - enabled: 1
-    path: Assets/JohnTest/Scene/ExampleLevel.unity
-    guid: 2a35cbdc6de200641801f0ed72ba5729
+    path: Assets/Scenes/MainLevel.unity
+    guid: 432f60a228c373d41b71488029b21ad1
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 52334901748272b4481bb9a4c9f9d37a,
       type: 2}

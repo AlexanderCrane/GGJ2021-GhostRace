@@ -12,7 +12,7 @@ public class PlayerNetworkCommands : NetworkBehaviour
     private Transform playerCamera;
 
     private void Start() {
-        playerCamera = GetComponent<PlayerNetworkManager>().playerCamera.transform;
+        playerCamera = GetComponent<PlayerManager>().playerCamera.transform;
     }
 
     /// <summary>
