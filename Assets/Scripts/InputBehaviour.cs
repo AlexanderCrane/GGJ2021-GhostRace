@@ -6,7 +6,7 @@ public class InputBehaviour : MonoBehaviour
 {
     public InputMaster controls;
 
-    void Awake() {
+    protected virtual void Awake() {
         controls = new InputMaster();
         controls.Player.Move.Enable();
         controls.Player.Look.Enable();

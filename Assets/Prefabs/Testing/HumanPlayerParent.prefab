@@ -24,18 +24,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Prefabs/Testing/HumanPlayerParent.prefab
-  m_GameObject: {fileID: 3730592041222815573}
-  m_LocalRotation: {x: 0.17234617, y: -0, z: -0, w: 0.9850365}
-  m_LocalPosition: {x: 0, y: 1.7, z: -4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3730592041939736624}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 19.849, y: 0, z: 0}
---- !u!20 &3730592041222815575
-Camera:
-=======
   m_GameObject: {fileID: 158412}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -46,66 +34,18 @@ Camera:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3358414
 MeshFilter:
->>>>>>> alex:Assets/DungeonTraps/Trap/Prefab/Pf_SawTrap01.prefab
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Prefabs/Testing/HumanPlayerParent.prefab
-  m_GameObject: {fileID: 3730592041222815573}
-  m_Enabled: 0
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 1
-  m_GateFitMode: 2
-  m_FOVAxisMode: 0
-  m_SensorSize: {x: 36, y: 24}
-  m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: -1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!81 &3730592041222815574
-AudioListener:
-=======
   m_GameObject: {fileID: 158412}
   m_Mesh: {fileID: 4300000, guid: e3a25d4ccafb5c740aa3c70982a173e2, type: 3}
 --- !u!23 &2358414
 MeshRenderer:
->>>>>>> alex:Assets/DungeonTraps/Trap/Prefab/Pf_SawTrap01.prefab
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD:Assets/Prefabs/Testing/HumanPlayerParent.prefab
-  m_GameObject: {fileID: 3730592041222815573}
-  m_Enabled: 0
---- !u!1 &3730592041537160646
-=======
   m_GameObject: {fileID: 158412}
   m_Enabled: 1
   m_CastShadows: 1
@@ -140,7 +80,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
 --- !u!1 &158414
->>>>>>> alex:Assets/DungeonTraps/Trap/Prefab/Pf_SawTrap01.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -306,23 +245,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< HEAD:Assets/Prefabs/Testing/HumanPlayerParent.prefab
-  - component: {fileID: 3730592041939736624}
-  - component: {fileID: 3730592041939736639}
-  - component: {fileID: 3730592041939736638}
-  - component: {fileID: 3730592041939736637}
-  - component: {fileID: 3730592041939736626}
-  - component: {fileID: 946927600601000861}
-  - component: {fileID: 5035972806582131127}
-  - component: {fileID: 5891846871765705194}
-  - component: {fileID: 8179555780526674883}
-  - component: {fileID: 6050201386183182238}
-  - component: {fileID: 5296122554049131109}
-=======
   - component: {fileID: 458418}
   - component: {fileID: 3358420}
   - component: {fileID: 2358420}
->>>>>>> alex:Assets/DungeonTraps/Trap/Prefab/Pf_SawTrap01.prefab
   m_Layer: 0
   m_Name: SawBladeFrameCap
   m_TagString: Untagged
@@ -340,17 +265,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000004371139}
   m_LocalPosition: {x: 0, y: 0, z: 1.599}
   m_LocalScale: {x: 1, y: 1, z: 1}
-<<<<<<< HEAD:Assets/Prefabs/Testing/HumanPlayerParent.prefab
-  m_Children:
-  - {fileID: 3730592041889083549}
-  - {fileID: 3730592041222815592}
-  m_Father: {fileID: 3730592042017847520}
-  m_RootOrder: 1
-=======
   m_Children: []
   m_Father: {fileID: 458420}
   m_RootOrder: 3
->>>>>>> alex:Assets/DungeonTraps/Trap/Prefab/Pf_SawTrap01.prefab
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3358420
 MeshFilter:
@@ -399,134 +316,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-<<<<<<< HEAD:Assets/Prefabs/Testing/HumanPlayerParent.prefab
---- !u!136 &3730592041939736637
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3730592041939736636}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3730592041939736626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3730592041939736636}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f318b30f19341fb4dbd8a25b709b1a12, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 3730592041222815575}
-  SpawnPoint: {fileID: 3730592041537160646}
-  Projectile: {fileID: 0}
---- !u!114 &946927600601000861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3730592041939736636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  m_AssetId: 
-  hasSpawned: 0
---- !u!114 &5035972806582131127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3730592041939736636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  clientAuthority: 1
-  localPositionSensitivity: 0.01
-  localRotationSensitivity: 0.01
-  localScaleSensitivity: 0.01
---- !u!114 &5891846871765705194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3730592041939736636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb317d0664b67474b9ed8f3b50ee0bf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCamera: {fileID: 3730592041222815575}
---- !u!114 &8179555780526674883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3730592041939736636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e01785e02d850a645829805dfff6489e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
---- !u!114 &6050201386183182238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3730592041939736636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5d35e753c89da3418c4019a1e108a52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  playerBodyParts: []
-  playerCamera: {fileID: 0}
-  humanController: {fileID: 3730592041939736626}
---- !u!54 &5296122554049131109
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3730592041939736636}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!1 &3730592042017847535
-=======
 --- !u!1 &158420
->>>>>>> alex:Assets/DungeonTraps/Trap/Prefab/Pf_SawTrap01.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -554,15 +344,10 @@ Transform:
   m_LocalPosition: {x: -5.88, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-<<<<<<< HEAD:Assets/Prefabs/Testing/HumanPlayerParent.prefab
-  - {fileID: 3730592041537160647}
-  - {fileID: 3730592041939736624}
-=======
   - {fileID: 458416}
   - {fileID: 458414}
   - {fileID: 458412}
   - {fileID: 458418}
->>>>>>> alex:Assets/DungeonTraps/Trap/Prefab/Pf_SawTrap01.prefab
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

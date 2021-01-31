@@ -30,9 +30,11 @@ public class HumanController : InputBehaviour
     // float xRotation = 0f;
 
     // Start is called before the first frame update
-    void Start()
+    protected override void Awake()
     {
+        base.Awake();
         cam = GameObject.Instantiate(cam, transform.TransformPoint(Vector3.forward) , transform.rotation);
+        GetComponent<PlayerManager>().playerCamera = cam;
         
         rb = GetComponent<Rigidbody>();
         McGuffin = GameObject.FindWithTag("mcguffin");
@@ -50,7 +52,7 @@ public class HumanController : InputBehaviour
         }
  
         // transform.RotateAround(transform.position, Vector3.up, CameraRotation.x * CameraRotateSpeed);
-        //cam.transform.RotateAround(transform.position, Vector3.up, CameraRotation.x * CameraRotateSpeed);
+        cam.transform.RotateAround(transform.position, Vector3.up, CameraRotation.x * CameraRotateSpeed);
         
         // var x = lookX * 10 * Time.deltaTime;
         // var y = lookY * 10 * Time.deltaTime;
