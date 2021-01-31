@@ -28,7 +28,9 @@ public class InputBehaviour : MonoBehaviour
         controls.Player.NorthButton.performed += _ => NorthButtonPressed();
         controls.Player.SouthButton.performed += _ => SouthButtonPressed();
         controls.Player.LeftBumper.performed += _ => LeftBumperPressed();
+        controls.Player.LeftBumper.canceled += _ => LeftBumperReleased();
         controls.Player.RightBumper.performed += _ => RightBumperPressed();
+        controls.Player.RightBumper.canceled += _ => RightBumperReleased();
         controls.Player.LeftTrigger.performed += _ => LeftTriggerPressed();
         controls.Player.RightTrigger.performed += _ => RightTriggerPressed();
         controls.Player.Confirm.performed += _ => SouthButtonPressed();
@@ -72,9 +74,17 @@ public class InputBehaviour : MonoBehaviour
         Debug.Log("Right Bumper pressed");
     }
 
+    protected virtual void RightBumperReleased() {
+        Debug.Log("Right bumper released");
+    }
+
     protected virtual void LeftTriggerPressed()
     {
         Debug.Log("Left Trigger pressed");
+    }
+
+    protected virtual void LeftBumperReleased() {
+        Debug.Log("Left bumper released");
     }
 
     protected virtual void RightTriggerPressed()
