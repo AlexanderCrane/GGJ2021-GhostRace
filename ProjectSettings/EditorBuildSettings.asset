@@ -4,5 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/JohnTest/Scene/MirrorTestScene.unity
+    guid: 8787759cb627fc149b765b413a035f29
+  - enabled: 1
+    path: Assets/JohnTest/Scene/ExampleLevel.unity
+    guid: 2a35cbdc6de200641801f0ed72ba5729
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 52334901748272b4481bb9a4c9f9d37a,
+      type: 2}
