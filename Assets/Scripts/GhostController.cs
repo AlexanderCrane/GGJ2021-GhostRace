@@ -20,6 +20,8 @@ public class GhostController : InputBehaviour {
     float lookY = 0f;
 
     float xRotation = 0f;
+    bool canActivate;
+    GameObject nearbyTrap;
 
     // Start is called before the first frame update
     void Start() {
@@ -50,6 +52,19 @@ public class GhostController : InputBehaviour {
 
     }
 
+    private void OnTriggerEnter(Collider other) {
+        if(other.gameObject.tag == "trap"){
+            canActivate = true;
+            nearbyTrap = other.gameObject;
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if(other.gameObject.tag == "trap"){
+            nearbyTrap = null;
+        }
+    }
+
     protected override void Look(Vector2 looking) {
         lookX = looking.x;
         lookY = looking.y;
@@ -57,6 +72,14 @@ public class GhostController : InputBehaviour {
 
     protected override void Move(Vector2 movement) {
         magnitude = movement;
+    }
+
+    protected override void WestButtonPressed()
+    {
+        if(canActivate && nearbyTrap != null)
+        {
+            nearbyTrap.GetComponent<TrapActivate>().Activate();
+        }
     }
 
     protected override void RightBumperPressed() => up = 1f;
