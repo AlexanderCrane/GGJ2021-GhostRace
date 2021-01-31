@@ -6,6 +6,8 @@ TagManager:
   tags:
   - ground
   - mcguffin
+  - trap
+  - bullet
   layers:
   - Default
   - TransparentFX
