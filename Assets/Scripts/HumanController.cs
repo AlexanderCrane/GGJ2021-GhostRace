@@ -81,7 +81,8 @@ public class HumanController : MonoBehaviour
             transform.Translate(m, Space.Self);
         }
  
-        cam.transform.RotateAround(transform.position, Vector3.up, CameraRotation.x * CameraRotateSpeed);
+        transform.RotateAround(transform.position, Vector3.up, CameraRotation.x * CameraRotateSpeed);
+        //cam.transform.RotateAround(transform.position, Vector3.up, CameraRotation.x * CameraRotateSpeed);
         
         // var x = lookX * 10 * Time.deltaTime;
         // var y = lookY * 10 * Time.deltaTime;
@@ -92,12 +93,12 @@ public class HumanController : MonoBehaviour
         // GhostEyes.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         // transform.Rotate(Vector3.up * lookX);
         
-        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, cam.transform.localEulerAngles.y, transform.localEulerAngles.z);
+        //transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, cam.transform.localEulerAngles.y, transform.localEulerAngles.z);
 
         Vector3 cameraTargetPosition = transform.TransformPoint(new Vector3(1f, 1.25f, -2.7f));
 
         // Smoothly move the camera towards that target position
-        cam.transform.position = Vector3.SmoothDamp(cam.transform.position, cameraTargetPosition, ref velocity, 0.2f);    
+        //cam.transform.position = Vector3.SmoothDamp(cam.transform.position, cameraTargetPosition, ref velocity, 0.2f);    
     }
 
     private void OnCollisionEnter(Collision other) {

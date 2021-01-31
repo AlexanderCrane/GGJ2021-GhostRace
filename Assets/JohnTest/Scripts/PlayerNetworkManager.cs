@@ -10,7 +10,6 @@ public class PlayerNetworkManager : NetworkBehaviour
 
     [Header("Enabled Local Player Objects")]
     public GameObject playerCamera;
-    public HumanController humanController;
 
     // Start is called before the first frame update
     public override void OnStartLocalPlayer()
@@ -46,6 +45,7 @@ public class PlayerNetworkManager : NetworkBehaviour
          * Enable character input controllers here, for example:
          * GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
          */
+        HumanController humanController = GetComponent<HumanController>();
         GhostController ghostController = GetComponent<GhostController>();
         if (humanController == null && ghostController == null)
         {
