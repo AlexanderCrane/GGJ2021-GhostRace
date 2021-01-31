@@ -779,6 +779,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1684814263 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7165459942357794368, guid: ff8cf2fced17bbe4e8be82f2d897db81,
+    type: 3}
+  m_PrefabInstance: {fileID: 7165459942278828169}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2111245147
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +868,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &926916312179746024
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 926916313764827116, guid: 4468867a62f7da44e841cd6dbb96f698,
+        type: 3}
+      propertyPath: m_Name
+      value: TestSceneInitializer
+      objectReference: {fileID: 0}
+    - target: {fileID: 926916313764827117, guid: 4468867a62f7da44e841cd6dbb96f698,
+        type: 3}
+      propertyPath: objectsToSetActive.Array.data[0]
+      value: 
+      objectReference: {fileID: 1684814263}
+    - target: {fileID: 926916313764827118, guid: 4468867a62f7da44e841cd6dbb96f698,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.0440078
+      objectReference: {fileID: 0}
+    - target: {fileID: 926916313764827118, guid: 4468867a62f7da44e841cd6dbb96f698,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.249999
+      objectReference: {fileID: 0}
+    - target: {fileID: 926916313764827118, guid: 4468867a62f7da44e841cd6dbb96f698,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.8331459
+      objectReference: {fileID: 0}
+    - target: {fileID: 926916313764827118, guid: 4468867a62f7da44e841cd6dbb96f698,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 926916313764827118, guid: 4468867a62f7da44e841cd6dbb96f698,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 926916313764827118, guid: 4468867a62f7da44e841cd6dbb96f698,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 926916313764827118, guid: 4468867a62f7da44e841cd6dbb96f698,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 926916313764827118, guid: 4468867a62f7da44e841cd6dbb96f698,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 926916313764827118, guid: 4468867a62f7da44e841cd6dbb96f698,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 926916313764827118, guid: 4468867a62f7da44e841cd6dbb96f698,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 926916313764827118, guid: 4468867a62f7da44e841cd6dbb96f698,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4468867a62f7da44e841cd6dbb96f698, type: 3}
 --- !u!1001 &7165459942278828169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -869,6 +949,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2148037865660792553, guid: ff8cf2fced17bbe4e8be82f2d897db81,
+        type: 3}
+      propertyPath: sceneId
+      value: 3939839567
+      objectReference: {fileID: 0}
+    - target: {fileID: 2148037865660792553, guid: ff8cf2fced17bbe4e8be82f2d897db81,
+        type: 3}
+      propertyPath: serverOnly
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3352771543975427959, guid: ff8cf2fced17bbe4e8be82f2d897db81,
+        type: 3}
+      propertyPath: isTestCharacter
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7165459942357794368, guid: ff8cf2fced17bbe4e8be82f2d897db81,
         type: 3}
       propertyPath: m_Name

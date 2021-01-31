@@ -25,10 +25,7 @@ public class PlayerNetworkManager : NetworkBehaviour
         DontDestroyOnLoad(this.gameObject);
         if (GetComponent<NetworkIdentity>().isLocalPlayer)
         {
-            enableLocalPlayerInput();
-            disableLocalBodyParts();
-
-            enableCameraComponents();
+            initializeLocalPlayer();
         }
     }
 
@@ -37,6 +34,13 @@ public class PlayerNetworkManager : NetworkBehaviour
         if (!isLocalPlayer) return;
         
         //call raycast or local update methods here...
+    }
+
+    public void initializeLocalPlayer()
+    {
+        enableLocalPlayerInput();
+        disableLocalBodyParts();
+        enableCameraComponents();
     }
 
     private void enableLocalPlayerInput()
