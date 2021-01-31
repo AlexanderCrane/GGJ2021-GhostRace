@@ -22,6 +22,9 @@ public class HumanController : MonoBehaviour
     public GameObject SpawnPoint;
 
     public GameObject Projectile;
+
+    Animator animationController;
+    public GameObject model;
     
     float lookX = 0f;
     float lookY = 0f;
@@ -59,7 +62,7 @@ public class HumanController : MonoBehaviour
         controls.Player.LeftStick.performed += _ => LeftStickPressed();
         controls.Player.RightStick.performed += _ => RightStickPressed();
         controls.Player.Move.performed += ctx => Movement = ctx.ReadValue<Vector2>();
-        controls.Player.Move.canceled += ctx => Movement = new Vector2(0,0);
+        controls.Player.Move.canceled += ctx => MoveStop();
         // controls.Player.Look.performed += ctx => Look(ctx.ReadValue<Vector2>());
         controls.Player.Look.performed += ctx => CameraRotation = ctx.ReadValue<Vector2>();
         controls.Player.Look.canceled += ctx => CameraRotation = new Vector2(0,0);
@@ -70,6 +73,7 @@ public class HumanController : MonoBehaviour
     void Start()
     {
         McGuffin = GameObject.FindWithTag("mcguffin");
+        animationController = model.GetComponent<Animator>();   
     }
 
     // Update is called once per frame
@@ -79,6 +83,7 @@ public class HumanController : MonoBehaviour
         {
             Vector3 m = new Vector3(Movement.x, 0, Movement.y) * MoveSpeed * Time.deltaTime;
             transform.Translate(m, Space.Self);
+            animationController.SetBool("Walk", true);
         }
  
         cam.transform.RotateAround(transform.position, Vector3.up, CameraRotation.x * CameraRotateSpeed);
@@ -104,6 +109,11 @@ public class HumanController : MonoBehaviour
         if(other.gameObject.tag == "ground")
         {
             grounded = true;
+        }
+
+        if(other.gameObject.tag == "trap")
+        {
+            TakeDamage();
         }
     }
 
@@ -188,6 +198,12 @@ public class HumanController : MonoBehaviour
 
     }
 
+    void MoveStop()
+    {
+        Movement = new Vector2(0,0);
+        animationController.SetBool("Walk", false);
+    }
+
     void Look(Vector2 looking)
     {
         lookX = looking.x;
@@ -212,6 +228,7 @@ public class HumanController : MonoBehaviour
     void TakeDamage()
     {
         Debug.Log("Took damage");
+        animationController.SetTrigger("GetHit");
 
         if(McGuffinEquipped)
         {
@@ -226,24 +243,24 @@ public class HumanController : MonoBehaviour
 
     void Attack()
     {
-        // GameObject bullet = GameObject.Instantiate(Projectile, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
-        // bullet.GetComponent<Rigidbody>().AddForce(0,0,1000);
-        // bullet.GetComponent<Rigidbody>().velocity = cam.transform.forward * 50;
-
-        Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
-        RaycastHit hit ;
-        Vector3 targetPoint ;
-        if (Physics.Raycast(ray, out hit))
+        if(!McGuffinEquipped)
         {
-            targetPoint = hit.point;
+            animationController.SetTrigger("Spell1");
+            Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+            RaycastHit hit ;
+            Vector3 targetPoint ;
+            if (Physics.Raycast(ray, out hit))
+            {
+                targetPoint = hit.point;
+            }
+            else
+            {
+                targetPoint = ray.GetPoint( 1000 ) ; // You may need to change this value according to your needs
+            }
+            // Create the bullet and give it a velocity according to the target point computed before
+            GameObject bullet = GameObject.Instantiate(Projectile, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+            bullet.GetComponent<Rigidbody>().velocity = ( targetPoint - transform.position ).normalized * 10;
         }
-        else
-        {
-            targetPoint = ray.GetPoint( 1000 ) ; // You may need to change this value according to your needs
-        }
-        // Create the bullet and give it a velocity according to the target point computed before
-        GameObject bullet = GameObject.Instantiate(Projectile, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
-        bullet.GetComponent<Rigidbody>().velocity = ( targetPoint - transform.position ).normalized * 10;
     }
 
 }

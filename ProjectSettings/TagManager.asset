@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ground
   - mcguffin
+  - trap
   layers:
   - Default
   - TransparentFX
