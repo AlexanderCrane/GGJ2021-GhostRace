@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HumanController : MonoBehaviour
+public class HumanController : InputBehaviour
 {
 
+    //Public
     public Camera cam;
-    public InputMaster controls;
+    public GameObject SpawnPoint;
+    public GameObject Projectile;
+    public GameObject model;
+
+    //Private
     Rigidbody rb;
     bool grounded;
     float MoveSpeed = 5f;
@@ -18,60 +23,16 @@ public class HumanController : MonoBehaviour
     Vector2 Movement;
     GameObject McGuffin;
     bool McGuffinEquipped;
-
-    public GameObject SpawnPoint;
-
-    public GameObject Projectile;
-
     Animator animationController;
-    public GameObject model;
-    
     float lookX = 0f;
     float lookY = 0f;
-    float xRotation = 0f;
-    void Awake()
-    {
-        rb = GetComponent<Rigidbody>();
-        controls = new InputMaster();
-        controls.Player.Move.Enable();
-        controls.Player.Look.Enable();
-        controls.Player.WestButton.Enable();
-        controls.Player.EastButton.Enable();
-        controls.Player.NorthButton.Enable();
-        controls.Player.SouthButton.Enable();
-        controls.Player.LeftBumper.Enable();
-        controls.Player.RightBumper.Enable();
-        controls.Player.LeftTrigger.Enable();
-        controls.Player.RightTrigger.Enable();
-        controls.Player.Confirm.Enable();
-        controls.Player.Start.Enable();
-        controls.Player.Back.Enable();
-        controls.Player.LeftStick.Enable();
-        controls.Player.RightStick.Enable();
-        controls.Player.WestButton.performed += _ => WestButtonPressed();
-        controls.Player.EastButton.performed += _ => EastButtonPressed();
-        controls.Player.NorthButton.performed += _ => NorthButtonPressed();
-        controls.Player.SouthButton.performed += _ => SouthButtonPressed();
-        controls.Player.LeftBumper.performed += _ => LeftBumperPressed();
-        controls.Player.RightBumper.performed += _ => RightBumperPressed();
-        controls.Player.LeftTrigger.performed += _ => LeftTriggerPressed();
-        controls.Player.RightTrigger.performed += _ => RightTriggerPressed();
-        controls.Player.Confirm.performed += _ => SouthButtonPressed();
-        controls.Player.Start.performed += _ => StartPressed();
-        controls.Player.Back.performed += _ => EastButtonPressed();
-        controls.Player.LeftStick.performed += _ => LeftStickPressed();
-        controls.Player.RightStick.performed += _ => RightStickPressed();
-        controls.Player.Move.performed += ctx => Movement = ctx.ReadValue<Vector2>();
-        controls.Player.Move.canceled += ctx => MoveStop();
-        // controls.Player.Look.performed += ctx => Look(ctx.ReadValue<Vector2>());
-        controls.Player.Look.performed += ctx => CameraRotation = ctx.ReadValue<Vector2>();
-        controls.Player.Look.canceled += ctx => CameraRotation = new Vector2(0,0);
-
-    }
+    bool canAttack = true;
+    // float xRotation = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         McGuffin = GameObject.FindWithTag("mcguffin");
         animationController = model.GetComponent<Animator>();   
     }
@@ -105,6 +66,60 @@ public class HumanController : MonoBehaviour
         cam.transform.position = Vector3.SmoothDamp(cam.transform.position, cameraTargetPosition, ref velocity, 0.2f);    
     }
 
+    protected override void WestButtonPressed()
+    {
+        Debug.Log("Attacking");
+        Attack();
+    }
+
+    protected override void EastButtonPressed()
+    {
+        TakeDamage();
+    }
+
+    protected override void NorthButtonPressed()
+    {
+        Debug.Log("North button pressed");
+
+        if(nearMcGuffin)
+        {
+            McGuffin.transform.position = new Vector3(transform.position.x, transform.position.y + 1.3f, transform.position.z);
+            McGuffin.gameObject.transform.SetParent(this.transform);
+            McGuffinEquipped = true;
+        }
+    }
+
+    protected override void SouthButtonPressed()
+    {
+        Debug.Log("Confirm/South button pressed");
+        if(grounded)
+        {
+            rb.AddForce(new Vector3(0,200f,0));
+        }
+    }
+
+    protected override void Move(Vector2 v2Movement)
+    {
+        Movement = v2Movement;
+        if(v2Movement == Vector2.zero)
+        {
+            animationController.SetBool("Walk", false);
+        }
+    }
+
+    protected override void Look(Vector2 looking)
+    {
+        CameraRotation = looking;
+        lookX = looking.x;
+        lookY = looking.y;
+    }
+
+    void MoveStop()
+    {
+        Movement = new Vector2(0,0);
+        animationController.SetBool("Walk", false);
+    }
+
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == "ground")
         {
@@ -125,95 +140,13 @@ public class HumanController : MonoBehaviour
 
     }
 
-    public void WestButtonPressed()
-    {
-        Debug.Log("West button pressed");
-        Attack();
-    }
-
-    public void EastButtonPressed()
-    {
-        Debug.Log("Back/East button pressed");
-        TakeDamage();
-    }
-
-    void NorthButtonPressed()
-    {
-        Debug.Log("North button pressed");
-
-        if(nearMcGuffin)
-        {
-            McGuffin.transform.position = new Vector3(transform.position.x, transform.position.y + 1.3f, transform.position.z);
-            McGuffin.gameObject.transform.SetParent(this.transform);
-            McGuffinEquipped = true;
-        }
-    }
-
-    void SouthButtonPressed()
-    {
-        Debug.Log("Confirm/South button pressed");
-        if(grounded)
-        {
-            rb.AddForce(new Vector3(0,200f,0));
-        }
-    }
-
-    void LeftBumperPressed()
-    {
-        Debug.Log("Left Bumper pressed");
-    }
-
-    void RightBumperPressed()
-    {
-        Debug.Log("Right Bumper pressed");
-    }
-
-    void LeftTriggerPressed()
-    {
-        Debug.Log("Left Trigger pressed");
-    }
-
-    void RightTriggerPressed()
-    {
-        Debug.Log("Right Trigger pressed");
-    }
-
-    void StartPressed()
-    {
-        Debug.Log("Start pressed");
-    }
-
-    void LeftStickPressed()
-    {
-        Debug.Log("Left Stick pressed");
-    }
-
-    void RightStickPressed()
-    {
-        Debug.Log("Right Stick pressed");
-    }
-
-    void Move(Vector2 movement)
-    {
-
-    }
-
-    void MoveStop()
-    {
-        Movement = new Vector2(0,0);
-        animationController.SetBool("Walk", false);
-    }
-
-    void Look(Vector2 looking)
-    {
-        lookX = looking.x;
-        lookY = looking.y;
-    }
-
     private void OnTriggerEnter(Collider other) {
         if(other.gameObject.tag == "mcguffin")
         {
             nearMcGuffin = true;
+        } 
+        if(other.gameObject.tag == "bullet"){
+            TakeDamage();
         }
     }
 
@@ -243,8 +176,10 @@ public class HumanController : MonoBehaviour
 
     void Attack()
     {
-        if(!McGuffinEquipped)
+        if(!McGuffinEquipped && canAttack)
         {
+            canAttack = false;
+            StartCoroutine(CountdownToAttack());
             animationController.SetTrigger("Spell1");
             Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
             RaycastHit hit ;
@@ -255,12 +190,18 @@ public class HumanController : MonoBehaviour
             }
             else
             {
-                targetPoint = ray.GetPoint( 1000 ) ; // You may need to change this value according to your needs
+                targetPoint = ray.GetPoint( 1000 ) ; // May need to change this value according to needs
             }
             // Create the bullet and give it a velocity according to the target point computed before
-            GameObject bullet = GameObject.Instantiate(Projectile, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
-            bullet.GetComponent<Rigidbody>().velocity = ( targetPoint - transform.position ).normalized * 10;
+            GameObject bullet = GameObject.Instantiate(Projectile, transform.TransformPoint(Vector3.forward * 1.1f) , transform.rotation);
+            bullet.GetComponent<DespawnOnHitOrTime>().CountDownToDestroy();
+            bullet.GetComponent<Rigidbody>().velocity = ( targetPoint - transform.position ).normalized * 20;
         }
     }
 
+    private IEnumerator CountdownToAttack()
+    {
+        yield return new WaitForSeconds(1.5f);
+        canAttack = true;
+    }
 }
