@@ -8,6 +8,8 @@ TagManager:
   - mcguffin
   - trap
   - bullet
+  - lobby
+  - playerholder
   layers:
   - Default
   - TransparentFX
