@@ -8,6 +8,8 @@ TagManager:
   - mcguffin
   - trap
   - bullet
+  - FxTemporaire
+  - spawn
   layers:
   - Default
   - TransparentFX

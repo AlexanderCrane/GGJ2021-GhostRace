@@ -11,9 +11,9 @@ public class McGuffinSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        McGuffin = GameObject.FindWithTag("mcguffin");
         chosenPoint = SpawnPoints[Random.Range(0,SpawnPoints.Length)].transform.position;
-        GameObject McGuffinPickup = GameObject.Instantiate(McGuffin, transform.TransformPoint(Vector3.forward * 1.1f) , transform.rotation);
-        McGuffinPickup.transform.position = chosenPoint;
+        McGuffin.transform.position = chosenPoint;
     }
 
     // Update is called once per frame

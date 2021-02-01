@@ -38,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 115016, guid: afd19ab1d4bb70b499bb2f62171a522d, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: trap
       objectReference: {fileID: 0}
     - target: {fileID: 115018, guid: afd19ab1d4bb70b499bb2f62171a522d, type: 3}
       propertyPath: m_TagString
@@ -103,6 +103,22 @@ PrefabInstance:
     - target: {fileID: 415018, guid: afd19ab1d4bb70b499bb2f62171a522d, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.496
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515020, guid: afd19ab1d4bb70b499bb2f62171a522d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.43504724
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515020, guid: afd19ab1d4bb70b499bb2f62171a522d, type: 3}
+      propertyPath: m_Center.x
+      value: 0.0019949137
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515020, guid: afd19ab1d4bb70b499bb2f62171a522d, type: 3}
+      propertyPath: m_Center.y
+      value: 0.20905422
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515020, guid: afd19ab1d4bb70b499bb2f62171a522d, type: 3}
+      propertyPath: m_Center.z
+      value: -0.0029926111
       objectReference: {fileID: 0}
     - target: {fileID: 11115020, guid: afd19ab1d4bb70b499bb2f62171a522d, type: 3}
       propertyPath: m_PlayAutomatically
