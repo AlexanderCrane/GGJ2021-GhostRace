@@ -17,4 +17,6 @@ public class GameNetworkManager : NetworkManager
     {
         playerPrefab = ghost;
     }
+
+    
 }

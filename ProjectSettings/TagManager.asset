@@ -10,6 +10,7 @@ TagManager:
   - bullet
   - FxTemporaire
   - spawn
+  - TeamSelection
   layers:
   - Default
   - TransparentFX
