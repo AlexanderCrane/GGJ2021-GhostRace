@@ -23,7 +23,7 @@ public class PlayerNetworkManager : NetworkBehaviour
 
         base.OnStartLocalPlayer();
         DontDestroyOnLoad(this.gameObject);
-        if (GetComponent<NetworkIdentity>().isLocalPlayer)
+        if (isLocalPlayer)
         {
             initializeLocalPlayer();
         }

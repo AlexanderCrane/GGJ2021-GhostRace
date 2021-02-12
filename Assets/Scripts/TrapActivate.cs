@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Mirror;
 
-public class TrapActivate : MonoBehaviour
+public class TrapActivate : NetworkBehaviour
 {
     Animator animationController;
 
@@ -28,5 +29,11 @@ public class TrapActivate : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         anim.Stop();
+    }
+
+    [ClientRpc]
+    public void Rpc_Activate()
+    {
+        Activate();
     }
 }

@@ -78,7 +78,8 @@ public class GhostController : InputBehaviour {
     {
         if(canActivate && nearbyTrap != null)
         {
-            nearbyTrap.GetComponent<TrapActivate>().Activate();
+            GetComponent<PlayerNetworkCommands>().Cmd_ActivateTrap(nearbyTrap);
+            // nearbyTrap.GetComponent<TrapActivate>().Activate();
         }
     }
 

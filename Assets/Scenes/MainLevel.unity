@@ -1031,6 +1031,7 @@ GameObject:
   - component: {fileID: 64981349}
   - component: {fileID: 64981348}
   - component: {fileID: 64981347}
+  - component: {fileID: 64981351}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (3)
   m_TagString: trap
@@ -1050,6 +1051,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &64981348
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1098,6 +1101,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &64981351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64981346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2783476808
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &80268237
 GameObject:
   m_ObjectHideFlags: 0
@@ -2094,6 +2113,7 @@ GameObject:
   - component: {fileID: 215451595}
   - component: {fileID: 215451594}
   - component: {fileID: 215451593}
+  - component: {fileID: 215451597}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (9)
   m_TagString: trap
@@ -2113,6 +2133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &215451594
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2161,6 +2183,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &215451597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215451592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2921058939
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &218320316
 GameObject:
   m_ObjectHideFlags: 0
@@ -8257,6 +8295,7 @@ GameObject:
   - component: {fileID: 336081466}
   - component: {fileID: 336081465}
   - component: {fileID: 336081464}
+  - component: {fileID: 336081468}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (4)
   m_TagString: trap
@@ -8276,6 +8315,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &336081465
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8324,6 +8365,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 65
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &336081468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336081463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2204713498
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &348681275
 GameObject:
   m_ObjectHideFlags: 0
@@ -9615,6 +9672,7 @@ GameObject:
   - component: {fileID: 433547333}
   - component: {fileID: 433547332}
   - component: {fileID: 433547331}
+  - component: {fileID: 433547335}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (32)
   m_TagString: trap
@@ -9634,6 +9692,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &433547332
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9682,6 +9742,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 81
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &433547335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433547330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3641416930
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &448906563
 GameObject:
   m_ObjectHideFlags: 0
@@ -9773,6 +9849,7 @@ GameObject:
   - component: {fileID: 449929876}
   - component: {fileID: 449929875}
   - component: {fileID: 449929874}
+  - component: {fileID: 449929878}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (14)
   m_TagString: trap
@@ -9792,6 +9869,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &449929875
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9840,6 +9919,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 94
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &449929878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449929873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 4115997131
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &453684202
 GameObject:
   m_ObjectHideFlags: 0
@@ -10119,6 +10214,7 @@ GameObject:
   - component: {fileID: 464180649}
   - component: {fileID: 464180648}
   - component: {fileID: 464180647}
+  - component: {fileID: 464180651}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (10)
   m_TagString: trap
@@ -10138,6 +10234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &464180648
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10186,6 +10284,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 79
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &464180651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464180646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 875505568
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &477443222
 GameObject:
   m_ObjectHideFlags: 0
@@ -10484,6 +10598,7 @@ GameObject:
   - component: {fileID: 503675657}
   - component: {fileID: 503675656}
   - component: {fileID: 503675655}
+  - component: {fileID: 503675659}
   m_Layer: 0
   m_Name: Pf_AxeTrap Variant (4)
   m_TagString: trap
@@ -10503,6 +10618,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &503675656
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10547,6 +10664,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 74
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!114 &503675659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503675654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3908864950
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &508998027
 GameObject:
   m_ObjectHideFlags: 0
@@ -10843,6 +10976,7 @@ GameObject:
   - component: {fileID: 514976217}
   - component: {fileID: 514976216}
   - component: {fileID: 514976215}
+  - component: {fileID: 514976219}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (19)
   m_TagString: trap
@@ -10862,6 +10996,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &514976216
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10910,6 +11046,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 102
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &514976219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514976214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 346165705
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &517084331
 GameObject:
   m_ObjectHideFlags: 0
@@ -11001,6 +11153,7 @@ GameObject:
   - component: {fileID: 529078520}
   - component: {fileID: 529078519}
   - component: {fileID: 529078518}
+  - component: {fileID: 529078522}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (1)
   m_TagString: trap
@@ -11020,6 +11173,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &529078519
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11068,6 +11223,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 97
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &529078522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529078517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2955554842
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &534708666
 GameObject:
   m_ObjectHideFlags: 0
@@ -11268,6 +11439,7 @@ GameObject:
   - component: {fileID: 547370442}
   - component: {fileID: 547370441}
   - component: {fileID: 547370440}
+  - component: {fileID: 547370444}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (7)
   m_TagString: trap
@@ -11287,6 +11459,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &547370441
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11335,6 +11509,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 80
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &547370444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547370439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2349907576
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &549493819
 GameObject:
   m_ObjectHideFlags: 0
@@ -11426,6 +11616,7 @@ GameObject:
   - component: {fileID: 557232332}
   - component: {fileID: 557232331}
   - component: {fileID: 557232330}
+  - component: {fileID: 557232334}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (2)
   m_TagString: trap
@@ -11445,6 +11636,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &557232331
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11493,6 +11686,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 85
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &557232334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557232329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3853130094
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &559120233
 GameObject:
   m_ObjectHideFlags: 0
@@ -11692,6 +11901,7 @@ GameObject:
   - component: {fileID: 577282214}
   - component: {fileID: 577282213}
   - component: {fileID: 577282212}
+  - component: {fileID: 577282216}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (15)
   m_TagString: trap
@@ -11711,6 +11921,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &577282213
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11759,6 +11971,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 107
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &577282216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577282211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3330073019
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &601883587
 GameObject:
   m_ObjectHideFlags: 0
@@ -12506,6 +12734,7 @@ GameObject:
   - component: {fileID: 669913211}
   - component: {fileID: 669913210}
   - component: {fileID: 669913209}
+  - component: {fileID: 669913213}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (22)
   m_TagString: trap
@@ -12525,6 +12754,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &669913210
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12573,6 +12804,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 88
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &669913213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669913208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 885392653
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &676599747
 GameObject:
   m_ObjectHideFlags: 0
@@ -13117,6 +13364,7 @@ GameObject:
   - component: {fileID: 709327288}
   - component: {fileID: 709327287}
   - component: {fileID: 709327286}
+  - component: {fileID: 709327290}
   m_Layer: 0
   m_Name: Pf_SawTrap02 Variant (4)
   m_TagString: trap
@@ -13136,6 +13384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &709327287
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13184,6 +13434,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &709327290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709327285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 933720951
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &720038571
 GameObject:
   m_ObjectHideFlags: 0
@@ -13820,6 +14086,7 @@ GameObject:
   - component: {fileID: 765521501}
   - component: {fileID: 765521500}
   - component: {fileID: 765521499}
+  - component: {fileID: 765521503}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (8)
   m_TagString: trap
@@ -13839,6 +14106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &765521500
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13887,6 +14156,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 63
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &765521503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765521498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 4217095743
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &765780712
 GameObject:
   m_ObjectHideFlags: 0
@@ -13899,6 +14184,7 @@ GameObject:
   - component: {fileID: 765780715}
   - component: {fileID: 765780714}
   - component: {fileID: 765780713}
+  - component: {fileID: 765780717}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (18)
   m_TagString: trap
@@ -13918,6 +14204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &765780714
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13966,6 +14254,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 77
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &765780717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765780712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 770077053
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &769371286
 GameObject:
   m_ObjectHideFlags: 0
@@ -14151,6 +14455,7 @@ GameObject:
   - component: {fileID: 789853700}
   - component: {fileID: 789853699}
   - component: {fileID: 789853698}
+  - component: {fileID: 789853702}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (6)
   m_TagString: trap
@@ -14170,6 +14475,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &789853699
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14218,6 +14525,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 76
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &789853702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789853697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 1102246564
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &792161318
 GameObject:
   m_ObjectHideFlags: 0
@@ -14512,6 +14835,7 @@ GameObject:
   - component: {fileID: 803524104}
   - component: {fileID: 803524103}
   - component: {fileID: 803524102}
+  - component: {fileID: 803524106}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (26)
   m_TagString: trap
@@ -14531,6 +14855,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &803524103
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14579,6 +14905,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 59
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &803524106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 803524101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 874285655
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &805093385
 GameObject:
   m_ObjectHideFlags: 0
@@ -15956,6 +16298,7 @@ GameObject:
   - component: {fileID: 947607974}
   - component: {fileID: 947607973}
   - component: {fileID: 947607972}
+  - component: {fileID: 947607976}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (5)
   m_TagString: trap
@@ -15975,6 +16318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &947607973
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16023,6 +16368,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 87
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &947607976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947607971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2025539745
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &948360788
 GameObject:
   m_ObjectHideFlags: 0
@@ -16035,6 +16396,7 @@ GameObject:
   - component: {fileID: 948360791}
   - component: {fileID: 948360790}
   - component: {fileID: 948360789}
+  - component: {fileID: 948360793}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (16)
   m_TagString: trap
@@ -16054,6 +16416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &948360790
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16102,6 +16466,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 96
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &948360793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948360788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 241170238
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &951173736
 GameObject:
   m_ObjectHideFlags: 0
@@ -16241,6 +16621,7 @@ GameObject:
   - component: {fileID: 960349888}
   - component: {fileID: 960349887}
   - component: {fileID: 960349886}
+  - component: {fileID: 960349890}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (29)
   m_TagString: trap
@@ -16260,6 +16641,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &960349887
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16308,6 +16691,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 66
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &960349890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960349885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 862164909
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &966628869
 GameObject:
   m_ObjectHideFlags: 0
@@ -16837,6 +17236,7 @@ GameObject:
   - component: {fileID: 984702470}
   - component: {fileID: 984702469}
   - component: {fileID: 984702468}
+  - component: {fileID: 984702472}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (31)
   m_TagString: trap
@@ -16856,6 +17256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &984702469
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16904,6 +17306,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 83
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &984702472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984702467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 1447370473
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1004615700
 GameObject:
   m_ObjectHideFlags: 0
@@ -18206,6 +18624,7 @@ GameObject:
   - component: {fileID: 1098380417}
   - component: {fileID: 1098380416}
   - component: {fileID: 1098380415}
+  - component: {fileID: 1098380419}
   m_Layer: 0
   m_Name: Pf_SawTrap02 Variant
   m_TagString: trap
@@ -18225,6 +18644,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1098380416
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -18273,6 +18694,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 100
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1098380419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098380414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 1834339099
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1107711055
 GameObject:
   m_ObjectHideFlags: 0
@@ -19067,6 +19504,7 @@ GameObject:
   - component: {fileID: 1184259456}
   - component: {fileID: 1184259455}
   - component: {fileID: 1184259454}
+  - component: {fileID: 1184259458}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (13)
   m_TagString: trap
@@ -19086,6 +19524,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1184259455
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -19134,6 +19574,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 62
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1184259458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184259453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 1686139894
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1188026355
 GameObject:
   m_ObjectHideFlags: 0
@@ -19332,6 +19788,7 @@ GameObject:
   - component: {fileID: 1208600569}
   - component: {fileID: 1208600568}
   - component: {fileID: 1208600567}
+  - component: {fileID: 1208600571}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (21)
   m_TagString: trap
@@ -19351,6 +19808,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1208600568
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -19399,6 +19858,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 72
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1208600571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208600566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 875719387
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1225687946
 GameObject:
   m_ObjectHideFlags: 0
@@ -19490,6 +19965,7 @@ GameObject:
   - component: {fileID: 1226284601}
   - component: {fileID: 1226284600}
   - component: {fileID: 1226284599}
+  - component: {fileID: 1226284603}
   m_Layer: 0
   m_Name: Pf_SawTrap02 Variant (2)
   m_TagString: trap
@@ -19509,6 +19985,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1226284600
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -19557,6 +20035,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 101
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1226284603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226284598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2928933580
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1227137685
 GameObject:
   m_ObjectHideFlags: 0
@@ -20131,6 +20625,7 @@ GameObject:
   - component: {fileID: 1253027221}
   - component: {fileID: 1253027220}
   - component: {fileID: 1253027219}
+  - component: {fileID: 1253027223}
   m_Layer: 0
   m_Name: Pf_AxeTrap Variant (3)
   m_TagString: trap
@@ -20150,6 +20645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1253027220
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -20194,6 +20691,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 105
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!114 &1253027223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1253027218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2316984048
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1256083399
 GameObject:
   m_ObjectHideFlags: 0
@@ -21209,6 +21722,7 @@ GameObject:
   - component: {fileID: 1316505772}
   - component: {fileID: 1316505771}
   - component: {fileID: 1316505770}
+  - component: {fileID: 1316505774}
   m_Layer: 0
   m_Name: Pf_AxeTrap Variant (5)
   m_TagString: trap
@@ -21228,6 +21742,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1316505771
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -21272,6 +21788,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 73
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1316505774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316505769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 676883900
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1320764351
 GameObject:
   m_ObjectHideFlags: 0
@@ -26407,6 +26939,7 @@ GameObject:
   - component: {fileID: 1410967081}
   - component: {fileID: 1410967080}
   - component: {fileID: 1410967079}
+  - component: {fileID: 1410967083}
   m_Layer: 0
   m_Name: Pf_SawTrap02 Variant (3)
   m_TagString: trap
@@ -26426,6 +26959,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1410967080
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -26474,6 +27009,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 103
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1410967083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410967078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3207670689
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1416276215
 GameObject:
   m_ObjectHideFlags: 0
@@ -26769,6 +27320,7 @@ GameObject:
   - component: {fileID: 1423082108}
   - component: {fileID: 1423082107}
   - component: {fileID: 1423082106}
+  - component: {fileID: 1423082110}
   m_Layer: 0
   m_Name: Pf_AxeTrap Variant (2)
   m_TagString: trap
@@ -26788,6 +27340,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1423082107
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -26832,6 +27386,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 69
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1423082110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423082105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3517162500
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1430072829
 GameObject:
   m_ObjectHideFlags: 0
@@ -27154,6 +27724,7 @@ GameObject:
   - component: {fileID: 1468523850}
   - component: {fileID: 1468523849}
   - component: {fileID: 1468523848}
+  - component: {fileID: 1468523852}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (24)
   m_TagString: trap
@@ -27173,6 +27744,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1468523849
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -27221,6 +27794,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 84
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1468523852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468523847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2368858463
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1478512619
 GameObject:
   m_ObjectHideFlags: 0
@@ -27406,6 +27995,7 @@ GameObject:
   - component: {fileID: 1482775877}
   - component: {fileID: 1482775876}
   - component: {fileID: 1482775875}
+  - component: {fileID: 1482775879}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (17)
   m_TagString: trap
@@ -27425,6 +28015,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1482775876
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -27473,6 +28065,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 82
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1482775879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482775874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3561149037
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1485182183
 GameObject:
   m_ObjectHideFlags: 0
@@ -28514,6 +29122,7 @@ GameObject:
   - component: {fileID: 1569559200}
   - component: {fileID: 1569559199}
   - component: {fileID: 1569559198}
+  - component: {fileID: 1569559202}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (30)
   m_TagString: trap
@@ -28533,6 +29142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1569559199
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -28581,6 +29192,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 61
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1569559202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569559197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 4012267601
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1570801594
 GameObject:
   m_ObjectHideFlags: 0
@@ -28687,6 +29314,7 @@ GameObject:
   - component: {fileID: 1595416634}
   - component: {fileID: 1595416633}
   - component: {fileID: 1595416632}
+  - component: {fileID: 1595416636}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (28)
   m_TagString: trap
@@ -28706,6 +29334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1595416633
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -28754,6 +29384,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 75
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1595416636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595416631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 486751886
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1597267413
 GameObject:
   m_ObjectHideFlags: 0
@@ -30490,6 +31136,7 @@ GameObject:
   - component: {fileID: 1738470774}
   - component: {fileID: 1738470773}
   - component: {fileID: 1738470772}
+  - component: {fileID: 1738470776}
   m_Layer: 0
   m_Name: Pf_AxeTrap Variant (6)
   m_TagString: trap
@@ -30509,6 +31156,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1738470773
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -30553,6 +31202,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 89
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &1738470776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738470771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 1249510338
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1743800515
 GameObject:
   m_ObjectHideFlags: 0
@@ -30845,6 +31510,7 @@ GameObject:
   - component: {fileID: 1768286845}
   - component: {fileID: 1768286844}
   - component: {fileID: 1768286843}
+  - component: {fileID: 1768286847}
   m_Layer: 0
   m_Name: Pf_AxeTrap Variant
   m_TagString: trap
@@ -30864,6 +31530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1768286844
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -30908,6 +31576,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 106
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1768286847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768286842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 498535537
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1772363978
 GameObject:
   m_ObjectHideFlags: 0
@@ -31621,6 +32305,7 @@ GameObject:
   - component: {fileID: 1829238387}
   - component: {fileID: 1829238386}
   - component: {fileID: 1829238385}
+  - component: {fileID: 1829238389}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (11)
   m_TagString: trap
@@ -31640,6 +32325,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1829238386
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -31688,6 +32375,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 86
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1829238389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1829238384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2773142273
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1841791853
 GameObject:
   m_ObjectHideFlags: 0
@@ -32075,6 +32778,7 @@ GameObject:
   - component: {fileID: 1883701991}
   - component: {fileID: 1883701990}
   - component: {fileID: 1883701989}
+  - component: {fileID: 1883701993}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (25)
   m_TagString: trap
@@ -32094,6 +32798,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1883701990
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -32142,6 +32848,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 78
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1883701993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883701988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 673832039
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1885134616
 GameObject:
   m_ObjectHideFlags: 0
@@ -32154,6 +32876,7 @@ GameObject:
   - component: {fileID: 1885134619}
   - component: {fileID: 1885134618}
   - component: {fileID: 1885134617}
+  - component: {fileID: 1885134621}
   m_Layer: 0
   m_Name: Pf_SawTrap02 Variant (5)
   m_TagString: trap
@@ -32173,6 +32896,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1885134618
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -32221,6 +32946,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 91
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1885134621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885134616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 1882814716
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1894074677
 GameObject:
   m_ObjectHideFlags: 0
@@ -32406,6 +33147,7 @@ GameObject:
   - component: {fileID: 1906547346}
   - component: {fileID: 1906547345}
   - component: {fileID: 1906547344}
+  - component: {fileID: 1906547348}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (27)
   m_TagString: trap
@@ -32425,6 +33167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1906547345
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -32473,6 +33217,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 71
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1906547348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906547343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 281331930
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1908394962
 GameObject:
   m_ObjectHideFlags: 0
@@ -32658,6 +33418,7 @@ GameObject:
   - component: {fileID: 1911410774}
   - component: {fileID: 1911410773}
   - component: {fileID: 1911410772}
+  - component: {fileID: 1911410776}
   m_Layer: 0
   m_Name: Pf_SawTrap02 Variant (1)
   m_TagString: trap
@@ -32677,6 +33438,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1911410773
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -32725,6 +33488,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 92
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1911410776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911410771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3167621161
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1913177526
 GameObject:
   m_ObjectHideFlags: 0
@@ -32737,6 +33516,7 @@ GameObject:
   - component: {fileID: 1913177529}
   - component: {fileID: 1913177528}
   - component: {fileID: 1913177527}
+  - component: {fileID: 1913177531}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (20)
   m_TagString: trap
@@ -32756,6 +33536,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1913177528
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -32804,6 +33586,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 90
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1913177531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1913177526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 2447581124
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1917493883
 GameObject:
   m_ObjectHideFlags: 0
@@ -32910,6 +33708,7 @@ GameObject:
   - component: {fileID: 1925114128}
   - component: {fileID: 1925114127}
   - component: {fileID: 1925114126}
+  - component: {fileID: 1925114130}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (12)
   m_TagString: trap
@@ -32929,6 +33728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1925114127
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -32977,6 +33778,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 104
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1925114130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925114125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 3402696310
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &1941072231
 GameObject:
   m_ObjectHideFlags: 0
@@ -33756,6 +34573,7 @@ GameObject:
   - component: {fileID: 1997956450}
   - component: {fileID: 1997956449}
   - component: {fileID: 1997956448}
+  - component: {fileID: 1997956452}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant
   m_TagString: trap
@@ -33775,6 +34593,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &1997956449
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -33823,6 +34643,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 98
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1997956452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997956447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 672245317
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &2019778149
 GameObject:
   m_ObjectHideFlags: 0
@@ -34022,6 +34858,7 @@ GameObject:
   - component: {fileID: 2030104551}
   - component: {fileID: 2030104550}
   - component: {fileID: 2030104549}
+  - component: {fileID: 2030104553}
   m_Layer: 0
   m_Name: Pf_Trap_Needle Variant (23)
   m_TagString: trap
@@ -34041,6 +34878,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &2030104550
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -34089,6 +34928,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 93
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2030104553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030104548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 1910839158
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &2034987845
 GameObject:
   m_ObjectHideFlags: 0
@@ -34289,6 +35144,7 @@ GameObject:
   - component: {fileID: 2073769636}
   - component: {fileID: 2073769635}
   - component: {fileID: 2073769634}
+  - component: {fileID: 2073769638}
   m_Layer: 0
   m_Name: Pf_AxeTrap Variant (1)
   m_TagString: trap
@@ -34308,6 +35164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8edf3a91b4e80047a30ae492d55fa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
 --- !u!135 &2073769635
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -34352,6 +35210,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 68
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &2073769638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073769633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 137530910
+  serverOnly: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!1 &2074644712
 GameObject:
   m_ObjectHideFlags: 0

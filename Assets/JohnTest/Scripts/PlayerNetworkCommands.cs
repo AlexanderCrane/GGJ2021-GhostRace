@@ -10,6 +10,12 @@ using Mirror;
 public class PlayerNetworkCommands : NetworkBehaviour
 {
     private Transform playerCamera;
+    
+    [Command]
+    public void Cmd_ActivateTrap(GameObject trap)
+    {
+        trap.GetComponent<TrapActivate>().Rpc_Activate();
+    }
 
     /// <summary>
     /// Call this function from a player script, and it will execute on the server.
