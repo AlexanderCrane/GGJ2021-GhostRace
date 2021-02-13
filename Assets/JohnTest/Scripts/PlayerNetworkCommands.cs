@@ -17,6 +17,21 @@ public class PlayerNetworkCommands : NetworkBehaviour
         trap.GetComponent<TrapActivate>().Rpc_Activate();
     }
 
+    [Command]
+    public void Cmd_PickUpMcGuffin()
+    {
+        if (GetComponent<HumanController>().nearMcGuffin) //server side check
+        {
+            Rpc_PickUpMcGuffin();
+        }
+    }
+
+    [ClientRpc]
+    private void Rpc_PickUpMcGuffin()
+    {
+        GetComponent<HumanController>().pickUpMcGuffin(); //call on clients
+    }
+
     /// <summary>
     /// Call this function from a player script, and it will execute on the server.
     /// This is unsafe.

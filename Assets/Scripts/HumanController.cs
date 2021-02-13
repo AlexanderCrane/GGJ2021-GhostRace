@@ -11,6 +11,7 @@ public class HumanController : InputBehaviour
     public GameObject Projectile;
     public GameObject model;
     public ParticleSystem deathAura;
+    public bool nearMcGuffin;
 
     //Private
     Rigidbody rb;
@@ -20,7 +21,6 @@ public class HumanController : InputBehaviour
     float CameraFollowSpeed = 0.3f;
     Vector2 CameraRotation;
     private Vector3 velocity = Vector3.zero;
-    bool nearMcGuffin;
     Vector2 Movement;
     GameObject McGuffin;
     bool McGuffinEquipped;
@@ -89,12 +89,7 @@ public class HumanController : InputBehaviour
     {
         Debug.Log("North button pressed");
 
-        if(nearMcGuffin)
-        {
-            McGuffin.transform.position = new Vector3(transform.position.x, transform.position.y + 1.3f, transform.position.z);
-            McGuffin.gameObject.transform.SetParent(this.transform);
-            McGuffinEquipped = true;
-        }
+        GetComponent<PlayerNetworkCommands>().Cmd_PickUpMcGuffin();
     }
 
     protected override void SouthButtonPressed()
@@ -206,6 +201,13 @@ public class HumanController : InputBehaviour
             bullet.GetComponent<DespawnOnHitOrTime>().CountDownToDestroy();
             bullet.GetComponent<Rigidbody>().velocity = ( targetPoint - transform.position ).normalized * 20;
         }
+    }
+
+    public void pickUpMcGuffin()
+    {
+        McGuffin.transform.position = new Vector3(transform.position.x, transform.position.y + 1.3f, transform.position.z);
+        McGuffin.gameObject.transform.SetParent(this.transform);
+        McGuffinEquipped = true;
     }
 
     private IEnumerator CountdownToAttack()
