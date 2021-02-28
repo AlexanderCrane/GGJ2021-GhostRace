@@ -445,6 +445,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 216b6730b0fa69843a1107ab3ac06930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkManagerScriptableObject: {fileID: 11400000, guid: dc727a2a7ad4d86489eae484f7a8fb3e,
+    type: 2}
   GhostEyes: {fileID: 7165459942524527967}
   moveSpeed: 1
 --- !u!54 &7165459942357794370

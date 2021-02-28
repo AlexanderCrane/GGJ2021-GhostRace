@@ -35,7 +35,7 @@ public class InputBehaviour : MonoBehaviour
         controls.Player.RightTrigger.performed += _ => RightTriggerPressed();
         // controls.Player.Confirm.performed += _ => SouthButtonPressed();
         controls.Player.Start.performed += _ => StartPressed();
-        controls.Player.Back.performed += _ => EastButtonPressed();
+        controls.Player.Back.performed += _ => BackPressed();
         controls.Player.LeftStick.performed += _ => LeftStickPressed();
         controls.Player.RightStick.performed += _ => RightStickPressed();
         controls.Player.Move.performed += ctx => Move(ctx.ReadValue<Vector2>());
@@ -95,6 +95,11 @@ public class InputBehaviour : MonoBehaviour
     protected virtual void StartPressed()
     {
         Debug.Log("Start pressed");
+    }
+
+    protected virtual void BackPressed()
+    {
+        Debug.Log("Back pressed");
     }
 
     protected virtual void LeftStickPressed()

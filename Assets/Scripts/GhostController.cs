@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class GhostController : InputBehaviour {
-
+    public NetworkManagerScriptableObject networkManagerScriptableObject;
     public Camera GhostEyes;
     public float moveSpeed = 1.0f;
 
@@ -90,4 +90,16 @@ public class GhostController : InputBehaviour {
     protected override void LeftBumperPressed() => down = 1f;
 
     protected override void LeftBumperReleased() => down = 0f;
+
+    protected override void StartPressed()
+    {
+        base.StartPressed();
+        networkManagerScriptableObject.leaveGame();
+    }
+
+    protected override void BackPressed()
+    {
+        base.BackPressed();
+        networkManagerScriptableObject.loadWinLoseScene();
+    }
 }

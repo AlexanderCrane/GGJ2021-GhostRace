@@ -22,7 +22,6 @@ public class PlayerNetworkManager : NetworkBehaviour
         
 
         base.OnStartLocalPlayer();
-        DontDestroyOnLoad(this.gameObject);
         if (isLocalPlayer)
         {
             initializeLocalPlayer();

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class TeamSelectionManager : NetworkBehaviour
 {
+    public NetworkManagerScriptableObject networkManagerScriptableObject;
     enum PlayerType {human, ghost}
     struct PlayerSpawnData
     {
@@ -34,6 +35,7 @@ public class TeamSelectionManager : NetworkBehaviour
             playerSelectionStates.Add(true);
         }
         playerSelectionStates.Callback += OnPlayerSelectionStatesChanged;
+        networkManagerScriptableObject.teamSelectionManager = this.gameObject;
     }
 
     void OnPlayerSelectionStatesChanged(SyncList<bool>.Operation op, int index, bool oldValue, bool newValue)

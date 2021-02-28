@@ -5,6 +5,8 @@ using Mirror;
 
 public class LobbyPlayerNetworkManager : NetworkBehaviour
 {
+    public NetworkManagerScriptableObject networkManagerScriptableObject;
+    public PlayerInfoScriptableObject playerInfoScriptableObject;
     GameObject humanPrefab;
     GameObject ghostPrefab;
 

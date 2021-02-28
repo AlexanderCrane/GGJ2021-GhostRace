@@ -6,6 +6,7 @@ public class HumanController : InputBehaviour
 {
 
     //Public
+    public NetworkManagerScriptableObject networkManagerScriptableObject;
     public Camera cam;
     public GameObject SpawnPoint;
     public GameObject Projectile;
@@ -115,6 +116,18 @@ public class HumanController : InputBehaviour
         CameraRotation = looking;
         lookX = looking.x;
         lookY = looking.y;
+    }
+
+    protected override void StartPressed()
+    {
+        base.StartPressed();
+        networkManagerScriptableObject.leaveGame();
+    }
+
+    protected override void BackPressed()
+    {
+        base.BackPressed();
+        networkManagerScriptableObject.loadWinLoseScene();
     }
 
     void MoveStop()

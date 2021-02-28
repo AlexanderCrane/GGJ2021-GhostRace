@@ -51,6 +51,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  networkManagerScriptableObject: {fileID: 11400000, guid: dc727a2a7ad4d86489eae484f7a8fb3e,
+    type: 2}
+  playerInfoScriptableObject: {fileID: 11400000, guid: ee3b45154dd27e6408de191a99b27d16,
+    type: 2}
 --- !u!114 &4566785001099972091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,7 +75,6 @@ MonoBehaviour:
   - {fileID: 1204136753219244197}
   - {fileID: 6397875232029808365}
   startingGamePanel: {fileID: 3439502156727282909}
-  teamSelectionManager: {fileID: 0}
 --- !u!114 &4368237076311471556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +191,37 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Cmd_SetPlayerSelectionOff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748565454071903648, guid: 0bc075745acc71e48b4b250f6096fb57,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748565454071903648, guid: 0bc075745acc71e48b4b250f6096fb57,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748565454071903648, guid: 0bc075745acc71e48b4b250f6096fb57,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748565454071903648, guid: 0bc075745acc71e48b4b250f6096fb57,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: dc727a2a7ad4d86489eae484f7a8fb3e,
+        type: 2}
+    - target: {fileID: 1748565454071903648, guid: 0bc075745acc71e48b4b250f6096fb57,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: leaveGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1748565454071903648, guid: 0bc075745acc71e48b4b250f6096fb57,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2597248769360366795, guid: 0bc075745acc71e48b4b250f6096fb57,
         type: 3}

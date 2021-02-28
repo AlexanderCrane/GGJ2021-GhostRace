@@ -16525,7 +16525,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dd5ed133c299546458d7b3b39966938b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -30345,6 +30345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 216b6730b0fa69843a1107ab3ac06930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  networkManagerScriptableObject: {fileID: 0}
   GhostEyes: {fileID: 278034118}
   moveSpeed: 1
 --- !u!4 &1649925060
@@ -36017,6 +36018,12 @@ PrefabInstance:
       propertyPath: team2SpawnTransform
       value: 
       objectReference: {fileID: 1097345310}
+    - target: {fileID: 1447293530328185795, guid: 7712203c804f18044b93dbd5d594e4cc,
+        type: 3}
+      propertyPath: networkManagerScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: dc727a2a7ad4d86489eae484f7a8fb3e,
+        type: 2}
     - target: {fileID: 3137977918729511276, guid: 7712203c804f18044b93dbd5d594e4cc,
         type: 3}
       propertyPath: m_LocalPosition.x
