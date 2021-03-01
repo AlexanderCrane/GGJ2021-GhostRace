@@ -15,19 +15,20 @@ public class HumanController : InputBehaviour
     //Private
     Rigidbody rb;
     bool grounded;
+    bool canAttack = true;
+    bool McGuffinEquipped;
+    bool nearMcGuffin;
+    bool nearGoal;
     float MoveSpeed = 5f;
     float CameraRotateSpeed = 1f;
     float CameraFollowSpeed = 0.3f;
     Vector2 CameraRotation;
-    private Vector3 velocity = Vector3.zero;
-    bool nearMcGuffin;
+    Vector3 velocity = Vector3.zero;
     Vector2 Movement;
     GameObject McGuffin;
-    bool McGuffinEquipped;
     Animator animationController;
     float lookX = 0f;
     float lookY = 0f;
-    bool canAttack = true;
     // float xRotation = 0f;
 
     // Start is called before the first frame update
@@ -89,11 +90,17 @@ public class HumanController : InputBehaviour
     {
         Debug.Log("North button pressed");
 
-        if(nearMcGuffin)
+        if(nearMcGuffin && McGuffinEquipped != true)
         {
             McGuffin.transform.position = new Vector3(transform.position.x, transform.position.y + 1.3f, transform.position.z);
             McGuffin.gameObject.transform.SetParent(this.transform);
             McGuffinEquipped = true;
+        }
+        else if(McGuffinEquipped && nearGoal)
+        {
+            Debug.Log("Game won");
+
+            //TODO: insert game victory code here
         }
     }
 
@@ -149,21 +156,30 @@ public class HumanController : InputBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.gameObject.tag == "mcguffin")
+        switch(other.gameObject.tag)
         {
-            nearMcGuffin = true;
-        } 
-        if(other.gameObject.tag == "bullet"){
-            TakeDamage();
+            case "mcguffin":
+                nearMcGuffin = true;
+                break;
+            case "bullet":
+                TakeDamage();
+                break;
+            case "Finish":
+                nearGoal = true;
+                break;
         }
     }
 
     private void OnTriggerExit(Collider other) {
-        if(other.gameObject.tag == "mcguffin")
+        switch(other.gameObject.tag)
         {
-            nearMcGuffin = false;
+            case "mcguffin":
+                nearMcGuffin = false;
+                break;
+            case "Finish":
+                nearGoal = false;
+                break;
         }
-
     }
 
     void TakeDamage()
