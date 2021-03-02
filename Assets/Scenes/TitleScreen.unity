@@ -1839,7 +1839,7 @@ PrefabInstance:
     - target: {fileID: 2794936094147185446, guid: 3dd80860bd308c04bbb2cdf6b7c2dbf5,
         type: 3}
       propertyPath: playerSpawnMethod
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dd80860bd308c04bbb2cdf6b7c2dbf5, type: 3}
