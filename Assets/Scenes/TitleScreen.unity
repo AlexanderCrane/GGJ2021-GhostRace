@@ -1836,5 +1836,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4368237076311471576, guid: e6346a13b5432174e98063ba9a4471fe,
         type: 3}
+    - target: {fileID: 2794936094147185446, guid: 3dd80860bd308c04bbb2cdf6b7c2dbf5,
+        type: 3}
+      propertyPath: playerSpawnMethod
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dd80860bd308c04bbb2cdf6b7c2dbf5, type: 3}

@@ -96,10 +96,4 @@ public class GhostController : InputBehaviour {
         base.StartPressed();
         networkManagerScriptableObject.leaveGame();
     }
-
-    protected override void BackPressed()
-    {
-        base.BackPressed();
-        networkManagerScriptableObject.loadWinLoseScene();
-    }
 }

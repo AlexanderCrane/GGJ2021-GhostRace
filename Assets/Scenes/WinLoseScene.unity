@@ -513,6 +513,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8059140289271929689, guid: 9c31daaaf2b36c948ad5d0731a492d1b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8661163301003005255, guid: 9c31daaaf2b36c948ad5d0731a492d1b,
         type: 3}
       propertyPath: m_fontAsset

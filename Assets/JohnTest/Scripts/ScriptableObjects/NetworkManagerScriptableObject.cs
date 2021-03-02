@@ -58,17 +58,10 @@ public class NetworkManagerScriptableObject : ScriptableObject
         SceneManager.LoadScene("MainLevel");
     }
 
-    public void loadWinLoseScene()
+    public void loadWinLoseScene(int winningTeam)
     {
-        setPlayerInfo();
-
+        playerInfoScriptableObject.hasPlayerWon = winningTeam == playerInfoScriptableObject.teamNumber;
         gameNetworkManager.ServerChangeScene("WinLoseScene");
-    }
-
-    public void setPlayerInfo()
-    {
-        //this sets all players' info status to win or lose based on their current team.
-        Debug.Log("Unimplemented set player info (win/lose) condition");
     }
 
     public void resetMainLevel()

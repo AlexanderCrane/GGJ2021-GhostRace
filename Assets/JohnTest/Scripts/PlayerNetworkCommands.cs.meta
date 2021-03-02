@@ -3,7 +3,9 @@ guid: e01785e02d850a645829805dfff6489e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - networkManagerScriptableObject: {fileID: 11400000, guid: dc727a2a7ad4d86489eae484f7a8fb3e,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

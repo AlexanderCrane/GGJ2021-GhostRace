@@ -513,6 +513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  teamNumber: 0
   playerCameraPrefab: {fileID: 0}
   playerBodyParts: []
   playerCamera: {fileID: 0}
@@ -530,6 +531,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  networkManagerScriptableObject: {fileID: 11400000, guid: dc727a2a7ad4d86489eae484f7a8fb3e,
+    type: 2}
 --- !u!114 &3001670508745545021
 MonoBehaviour:
   m_ObjectHideFlags: 0

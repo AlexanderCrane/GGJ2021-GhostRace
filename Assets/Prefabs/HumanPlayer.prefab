@@ -426,6 +426,8 @@ MonoBehaviour:
   model: {fileID: 5966702980191738657}
   deathAura: {fileID: 9195675064965770691}
   nearMcGuffin: 0
+  McGuffinEquipped: 0
+  nearGoal: 0
 --- !u!54 &5965565622951725370
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -490,6 +492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  teamNumber: 0
   playerCameraPrefab: {fileID: 3797539472468447748, guid: c99c867f81e60fe49a5c9913499e2001,
     type: 3}
   playerBodyParts: []
@@ -508,6 +511,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  networkManagerScriptableObject: {fileID: 11400000, guid: dc727a2a7ad4d86489eae484f7a8fb3e,
+    type: 2}
 --- !u!114 &2186287017742369804
 MonoBehaviour:
   m_ObjectHideFlags: 0

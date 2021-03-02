@@ -5,6 +5,8 @@ using Mirror;
 
 public class PlayerNetworkManager : NetworkBehaviour
 {
+    [SyncVar]
+    public int teamNumber;
     public Camera playerCameraPrefab;
     [Tooltip("A list of gameobject body parts that will be set inactive to the local player.")]
     public List<GameObject> playerBodyParts;

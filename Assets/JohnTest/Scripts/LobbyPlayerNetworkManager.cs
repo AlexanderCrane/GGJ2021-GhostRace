@@ -13,6 +13,8 @@ public class LobbyPlayerNetworkManager : NetworkBehaviour
     Vector3 spawnPosition = new Vector3(0,0,0);
     Quaternion spawnRotation = Quaternion.identity;
 
+    private int teamNumber;
+
     // Start is called before the first frame update
     public override void OnStartLocalPlayer()
     {
@@ -35,28 +37,35 @@ public class LobbyPlayerNetworkManager : NetworkBehaviour
         Human, Ghost
     }
 
-    [Command]
-    public void Cmd_ReplacePlayer(PlayerType playerType)
-    {
-        GameObject playerPrefab;
-        switch(playerType)
-        {
-            case PlayerType.Human:
-                playerPrefab = humanPrefab;
-                break;
-            case PlayerType.Ghost:
-                playerPrefab = ghostPrefab;
-                break;
-            default:
-                playerPrefab = null;
-                Debug.LogError("Invalid PlayerType to be spawned.");
-                break;
-        }
-        GameObject playerObject = Instantiate(playerPrefab, spawnPosition, spawnRotation);
-        NetworkServer.Spawn(playerObject);
-        if (NetworkServer.ReplacePlayerForConnection(connectionToClient, playerObject))
-        {
-            NetworkServer.Destroy(this.gameObject);
-        }
-    }
+    // [Command]
+    // public void Cmd_ReplacePlayer(PlayerType playerType)
+    // {
+    //     GameObject playerPrefab;
+    //     switch(playerType)
+    //     {
+    //         case PlayerType.Human:
+    //             playerPrefab = humanPrefab;
+    //             break;
+    //         case PlayerType.Ghost:
+    //             playerPrefab = ghostPrefab;
+    //             break;
+    //         default:
+    //             playerPrefab = null;
+    //             Debug.LogError("Invalid PlayerType to be spawned.");
+    //             break;
+    //     }
+    //     GameObject playerObject = Instantiate(playerPrefab, spawnPosition, spawnRotation);
+    //     NetworkServer.Spawn(playerObject);
+    //     if (NetworkServer.ReplacePlayerForConnection(connectionToClient, playerObject))
+    //     {
+    //         NetworkServer.Destroy(this.gameObject);
+    //     }
+    // }
+
+    // [Command]
+    // public void Cmd_SetTeamNumber(int teamNumber)
+    // {
+    //     this.teamNumber = teamNumber; //temporary server team number
+    //     Debug.Log("setting team number to: " + this.teamNumber);
+    // }
 }

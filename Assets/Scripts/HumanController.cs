@@ -13,22 +13,23 @@ public class HumanController : InputBehaviour
     public GameObject model;
     public ParticleSystem deathAura;
     public bool nearMcGuffin;
+    public bool McGuffinEquipped;
+    public bool nearGoal;
 
     //Private
     Rigidbody rb;
     bool grounded;
+    bool canAttack = true;
     float MoveSpeed = 5f;
     float CameraRotateSpeed = 1f;
     float CameraFollowSpeed = 0.3f;
     Vector2 CameraRotation;
-    private Vector3 velocity = Vector3.zero;
+    Vector3 velocity = Vector3.zero;
     Vector2 Movement;
     GameObject McGuffin;
-    bool McGuffinEquipped;
     Animator animationController;
     float lookX = 0f;
     float lookY = 0f;
-    bool canAttack = true;
     // float xRotation = 0f;
 
     // Start is called before the first frame update
@@ -90,7 +91,7 @@ public class HumanController : InputBehaviour
     {
         Debug.Log("North button pressed");
 
-        GetComponent<PlayerNetworkCommands>().Cmd_PickUpMcGuffin();
+        GetComponent<PlayerNetworkCommands>().Cmd_InteractWithMcGuffin();
     }
 
     protected override void SouthButtonPressed()
@@ -124,12 +125,6 @@ public class HumanController : InputBehaviour
         networkManagerScriptableObject.leaveGame();
     }
 
-    protected override void BackPressed()
-    {
-        base.BackPressed();
-        networkManagerScriptableObject.loadWinLoseScene();
-    }
-
     void MoveStop()
     {
         Movement = new Vector2(0,0);
@@ -157,21 +152,30 @@ public class HumanController : InputBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.gameObject.tag == "mcguffin")
+        switch(other.gameObject.tag)
         {
-            nearMcGuffin = true;
-        } 
-        if(other.gameObject.tag == "bullet"){
-            TakeDamage();
+            case "mcguffin":
+                nearMcGuffin = true;
+                break;
+            case "bullet":
+                TakeDamage();
+                break;
+            case "Finish":
+                nearGoal = true;
+                break;
         }
     }
 
     private void OnTriggerExit(Collider other) {
-        if(other.gameObject.tag == "mcguffin")
+        switch(other.gameObject.tag)
         {
-            nearMcGuffin = false;
+            case "mcguffin":
+                nearMcGuffin = false;
+                break;
+            case "Finish":
+                nearGoal = false;
+                break;
         }
-
     }
 
     void TakeDamage()

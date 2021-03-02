@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class TeamSelectionController : NetworkBehaviour
 {
+    public PlayerInfoScriptableObject playerInfoScriptableObject;
     public List<GameObject> playerSelectionButtons;
     public GameObject startingGamePanel;
 
@@ -35,6 +36,22 @@ public class TeamSelectionController : NetworkBehaviour
     public void Cmd_SetPlayerSelectionOff(int index)
     {
         teamSelectionManager.changeStateRequest(GetComponent<NetworkIdentity>(), index, false);
+    }
+
+    [Command]
+    public void Cmd_SetTeamNumber(int teamNumber)
+    {
+        Rpc_SetTeamNumber(teamNumber);
+        teamSelectionManager.teamNumber = teamNumber;
+    }
+
+    [ClientRpc]
+    public void Rpc_SetTeamNumber(int teamNumber)
+    {
+        if (isLocalPlayer)
+        {
+            playerInfoScriptableObject.teamNumber = teamNumber;
+        }
     }
 
     [Command]

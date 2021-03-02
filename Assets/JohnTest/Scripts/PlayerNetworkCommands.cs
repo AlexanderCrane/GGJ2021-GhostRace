@@ -9,6 +9,7 @@ using Mirror;
 /// </summary>
 public class PlayerNetworkCommands : NetworkBehaviour
 {
+    public NetworkManagerScriptableObject networkManagerScriptableObject;
     private Transform playerCamera;
     
     [Command]
@@ -18,11 +19,16 @@ public class PlayerNetworkCommands : NetworkBehaviour
     }
 
     [Command]
-    public void Cmd_PickUpMcGuffin()
+    public void Cmd_InteractWithMcGuffin()
     {
-        if (GetComponent<HumanController>().nearMcGuffin) //server side check
+        HumanController humanController = GetComponent<HumanController>();
+        if (humanController.nearMcGuffin && humanController.McGuffinEquipped != true) //server side check
         {
             Rpc_PickUpMcGuffin();
+        }
+        else if (humanController.McGuffinEquipped && humanController.nearGoal)
+        {
+            Rpc_HandleGameEnd(GetComponent<PlayerNetworkManager>().teamNumber);
         }
     }
 
@@ -30,6 +36,12 @@ public class PlayerNetworkCommands : NetworkBehaviour
     private void Rpc_PickUpMcGuffin()
     {
         GetComponent<HumanController>().pickUpMcGuffin(); //call on clients
+    }
+
+    [ClientRpc]
+    private void Rpc_HandleGameEnd(int winningTeam)
+    {
+        networkManagerScriptableObject.loadWinLoseScene(winningTeam);
     }
 
     /// <summary>

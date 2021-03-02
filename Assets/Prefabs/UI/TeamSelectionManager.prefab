@@ -55,11 +55,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  playerSelectionButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  networkManagerScriptableObject: {fileID: 11400000, guid: dc727a2a7ad4d86489eae484f7a8fb3e,
+    type: 2}
+  playerInfoScriptableObject: {fileID: 11400000, guid: ee3b45154dd27e6408de191a99b27d16,
+    type: 2}
+  teamNumber: 0
+  humanPrefab: {fileID: 0}
+  ghostPrefab: {fileID: 0}
+  team1SpawnTransform: {fileID: 0}
+  team2SpawnTransform: {fileID: 0}
+  teamSelectionControllers: []
 --- !u!223 &8233287464253765876
 Canvas:
   m_ObjectHideFlags: 0

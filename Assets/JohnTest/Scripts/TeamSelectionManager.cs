@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class TeamSelectionManager : NetworkBehaviour
 {
     public NetworkManagerScriptableObject networkManagerScriptableObject;
+    public PlayerInfoScriptableObject playerInfoScriptableObject;
+    public int teamNumber;
     enum PlayerType {human, ghost}
     struct PlayerSpawnData
     {
@@ -35,7 +37,12 @@ public class TeamSelectionManager : NetworkBehaviour
             playerSelectionStates.Add(true);
         }
         playerSelectionStates.Callback += OnPlayerSelectionStatesChanged;
+    }
+    
+    private void Start() {
+        
         networkManagerScriptableObject.teamSelectionManager = this.gameObject;
+        playerInfoScriptableObject.teamSelectionManager = this;
     }
 
     void OnPlayerSelectionStatesChanged(SyncList<bool>.Operation op, int index, bool oldValue, bool newValue)
@@ -135,6 +142,7 @@ public class TeamSelectionManager : NetworkBehaviour
         }
 
         GameObject playerObject = Instantiate(playerPrefab, spawnPosition, spawnRotation);
+        playerObject.GetComponent<PlayerNetworkManager>().teamNumber = teamNumber; //set client team number
         NetworkServer.Spawn(playerObject);
         if (NetworkServer.ReplacePlayerForConnection(playerSpawnData.networkIdentity.connectionToClient, playerObject))
         {
