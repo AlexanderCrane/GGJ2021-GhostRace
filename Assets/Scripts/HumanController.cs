@@ -53,6 +53,7 @@ public class HumanController : InputBehaviour
             Vector3 m = new Vector3(Movement.x, 0, Movement.y) * MoveSpeed * Time.deltaTime;
             transform.Translate(m, Space.Self);
             animationController.SetBool("Walk", true);
+            Debug.Log("Moving");
         }
  
         // transform.RotateAround(transform.position, Vector3.up, CameraRotation.x * CameraRotateSpeed);
