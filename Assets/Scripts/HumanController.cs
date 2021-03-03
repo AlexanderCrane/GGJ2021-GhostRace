@@ -7,8 +7,8 @@ public class HumanController : InputBehaviour
 
     //Public
     public NetworkManagerScriptableObject networkManagerScriptableObject;
+    public SpawnManagerScriptableObject SpawnManagerScriptableObject;
     public Camera cam;
-    public GameObject SpawnPoint;
     public GameObject Projectile;
     public GameObject model;
     public ParticleSystem deathAura;
@@ -43,7 +43,7 @@ public class HumanController : InputBehaviour
         
         rb = GetComponent<Rigidbody>();
         McGuffin = GameObject.FindWithTag("mcguffin");
-        animationController = model.GetComponent<Animator>();   
+        animationController = model.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -191,20 +191,23 @@ public class HumanController : InputBehaviour
 
             McGuffinEquipped = false;
         }
-        transform.position = SpawnPoint.transform.position;
-        cam.transform.position = SpawnPoint.transform.position;
+        Transform spawnPoint = SpawnManagerScriptableObject.getSpawnPoint(GetComponent<PlayerNetworkManager>().teamNumber - 1);
+        transform.position = spawnPoint.position;
+        cam.transform.position = spawnPoint.position;
     }
 
     void Attack()
     {
         if(!McGuffinEquipped && canAttack)
         {
+            //TODO: Instantiate bullet and set position and direction, then call network.spawn, and bullet itself moves forward on its own (maybe its personal transform.forward)
+
             canAttack = false;
             StartCoroutine(CountdownToAttack());
             animationController.SetTrigger("Spell1");
             Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
-            RaycastHit hit ;
-            Vector3 targetPoint ;
+            RaycastHit hit;
+            Vector3 targetPoint;
             if (Physics.Raycast(ray, out hit))
             {
                 targetPoint = hit.point;

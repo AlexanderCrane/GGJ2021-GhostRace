@@ -419,8 +419,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   networkManagerScriptableObject: {fileID: 11400000, guid: dc727a2a7ad4d86489eae484f7a8fb3e,
     type: 2}
+  SpawnManagerScriptableObject: {fileID: 11400000, guid: 813eb6738eaac414a8bf9c9e9a19e5d5,
+    type: 2}
   cam: {fileID: 3797539472468447748, guid: c99c867f81e60fe49a5c9913499e2001, type: 3}
-  SpawnPoint: {fileID: 0}
   Projectile: {fileID: 5804166209007602506, guid: fa886e492828d754b94265a334c61e98,
     type: 3}
   model: {fileID: 5966702980191738657}

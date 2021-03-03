@@ -9,7 +9,7 @@ public class McGuffinSpawner : MonoBehaviour
     Vector3 chosenPoint;
 
     // Start is called before the first frame update
-    void Start()
+    void DelayedStart()
     {
         McGuffin = GameObject.FindWithTag("mcguffin");
         chosenPoint = SpawnPoints[Random.Range(0,SpawnPoints.Length)].transform.position;
