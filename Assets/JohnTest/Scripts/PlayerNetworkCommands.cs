@@ -11,6 +11,11 @@ public class PlayerNetworkCommands : NetworkBehaviour
 {
     public NetworkManagerScriptableObject networkManagerScriptableObject;
     private Transform playerCamera;
+    private HumanController humanController;
+
+    private void Start() {
+        humanController = GetComponent<HumanController>();
+    }
     
     [Command]
     public void Cmd_ActivateTrap(GameObject trap)
@@ -21,7 +26,6 @@ public class PlayerNetworkCommands : NetworkBehaviour
     [Command]
     public void Cmd_InteractWithMcGuffin()
     {
-        HumanController humanController = GetComponent<HumanController>();
         if (humanController.nearMcGuffin && humanController.McGuffinEquipped != true) //server side check
         {
             Rpc_PickUpMcGuffin();
@@ -35,7 +39,7 @@ public class PlayerNetworkCommands : NetworkBehaviour
     [ClientRpc]
     private void Rpc_PickUpMcGuffin()
     {
-        GetComponent<HumanController>().pickUpMcGuffin(); //call on clients
+        humanController.pickUpMcGuffin(); //call on clients
     }
 
     [ClientRpc]
@@ -44,29 +48,56 @@ public class PlayerNetworkCommands : NetworkBehaviour
         networkManagerScriptableObject.loadWinLoseScene(winningTeam);
     }
 
-    /// <summary>
-    /// Call this function from a player script, and it will execute on the server.
-    /// This is unsafe.
-    /// </summary>
-    [Command]
-    public void CmdInteractRaycast()
-    {
-        Vector3 forward = playerCamera.TransformDirection(Vector3.forward).normalized;
-        float distance = 3.0f;
-
-        RaycastHit hit;
-        if (Physics.Raycast(playerCamera.position, forward, out hit, distance))
-        {
-            if (hit.transform.tag == "FakeDoorTag")
-            {
-                // hit.transform.GetComponent<Door>().RpcOpenDoor);
-            }
-        }
-    }
-
     public void setPlayerCameraTransform(Transform cameraTransform)
     {
         playerCamera = cameraTransform;
+    }
+    
+    private void OnCollisionEnter(Collision other) {
+        if(other.gameObject.tag == "trap")
+        {
+            Rpc_TakeDamage();
+        }
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        switch(other.gameObject.tag)
+        {
+            case "mcguffin":
+                humanController.nearMcGuffin = true;
+                break;
+            case "bullet":
+                Rpc_TakeDamage();
+                break;
+            case "Finish":
+                humanController.nearGoal = true;
+                break;
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        switch(other.gameObject.tag)
+        {
+            case "mcguffin":
+                humanController.nearMcGuffin = false;
+                break;
+            case "Finish":
+                humanController.nearGoal = false;
+                break;
+        }
+    }
+
+    [Command]
+    public void Cmd_TakeDamage()
+    {
+        Rpc_TakeDamage();
+    }
+
+    [ClientRpc]
+    public void Rpc_TakeDamage()
+    {
+        GetComponent<HumanController>().DropMcGuffin();
+        GetComponent<HumanController>().TakeDamage();
     }
 
     /// <summary>
@@ -91,5 +122,25 @@ public class PlayerNetworkCommands : NetworkBehaviour
     {
         // Do the actions on the client side
         // NetworkServer.Destroy(someObject);
+    }
+
+    /// <summary>
+    /// Call this function from a player script, and it will execute on the server.
+    /// This is unsafe.
+    /// </summary>
+    [Command]
+    public void CmdInteractRaycast()
+    {
+        Vector3 forward = playerCamera.TransformDirection(Vector3.forward).normalized;
+        float distance = 3.0f;
+
+        RaycastHit hit;
+        if (Physics.Raycast(playerCamera.position, forward, out hit, distance))
+        {
+            if (hit.transform.tag == "FakeDoorTag")
+            {
+                // hit.transform.GetComponent<Door>().RpcOpenDoor);
+            }
+        }
     }
 }

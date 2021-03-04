@@ -559,6 +559,7 @@ GameObject:
   - component: {fileID: 7165459942524527964}
   - component: {fileID: 1228590789314985074}
   - component: {fileID: 777965603305360745}
+  - component: {fileID: 9039791993301998244}
   m_Layer: 0
   m_Name: PlayerEyes
   m_TagString: Untagged
@@ -708,6 +709,18 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
+--- !u!114 &9039791993301998244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7165459942524527962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e7dc594fe4685744b108a4cc9ff784f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7838879221437184801
 PrefabInstance:
   m_ObjectHideFlags: 0

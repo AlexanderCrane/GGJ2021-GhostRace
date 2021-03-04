@@ -75,6 +75,44 @@ public class HumanController : InputBehaviour
         // Smoothly move the camera towards that target position
         cam.transform.position = Vector3.SmoothDamp(cam.transform.position, cameraTargetPosition, ref velocity, 0.2f);    
     }
+    
+
+    /// <summary>
+    /// Public Functions Start
+    /// /// </summary>
+    public void pickUpMcGuffin()
+    {
+        McGuffin.transform.position = new Vector3(transform.position.x, transform.position.y + 1.3f, transform.position.z);
+        McGuffin.gameObject.transform.SetParent(this.transform);
+        McGuffinEquipped = true;
+    }
+
+    public void TakeDamage()
+    {
+        Debug.Log("Took damage");
+        animationController.SetTrigger("GetHit");
+        deathAura.gameObject.SetActive(true);
+        deathAura.Play();
+        Transform spawnPoint = SpawnManagerScriptableObject.getSpawnPoint(GetComponent<PlayerNetworkManager>().teamNumber - 1);
+        transform.position = spawnPoint.position;
+        cam.transform.position = spawnPoint.position;
+    }
+
+    public void DropMcGuffin()
+    {
+        if(McGuffinEquipped)
+        {
+            McGuffin.transform.SetParent(null);
+            McGuffin.transform.position = new Vector3(McGuffin.transform.position.x, McGuffin.transform.position.y - 2f, McGuffin.transform.position.z);
+
+            McGuffinEquipped = false;
+            nearMcGuffin = false;
+        }
+    }
+    
+    /// <summary>
+    /// Public functions end
+    /// </summary>
 
     protected override void WestButtonPressed()
     {
@@ -84,7 +122,7 @@ public class HumanController : InputBehaviour
 
     protected override void EastButtonPressed()
     {
-        TakeDamage();
+        GetComponent<PlayerNetworkCommands>().Cmd_TakeDamage();
     }
 
     protected override void NorthButtonPressed()
@@ -136,11 +174,6 @@ public class HumanController : InputBehaviour
         {
             grounded = true;
         }
-
-        if(other.gameObject.tag == "trap")
-        {
-            TakeDamage();
-        }
     }
 
     private void OnCollisionExit(Collision other) {
@@ -148,52 +181,6 @@ public class HumanController : InputBehaviour
         {
             grounded = false;
         }
-
-    }
-
-    private void OnTriggerEnter(Collider other) {
-        switch(other.gameObject.tag)
-        {
-            case "mcguffin":
-                nearMcGuffin = true;
-                break;
-            case "bullet":
-                TakeDamage();
-                break;
-            case "Finish":
-                nearGoal = true;
-                break;
-        }
-    }
-
-    private void OnTriggerExit(Collider other) {
-        switch(other.gameObject.tag)
-        {
-            case "mcguffin":
-                nearMcGuffin = false;
-                break;
-            case "Finish":
-                nearGoal = false;
-                break;
-        }
-    }
-
-    void TakeDamage()
-    {
-        Debug.Log("Took damage");
-        animationController.SetTrigger("GetHit");
-        deathAura.gameObject.SetActive(true);
-        deathAura.Play();
-        if(McGuffinEquipped)
-        {
-            McGuffin.transform.SetParent(null);
-            McGuffin.transform.position = new Vector3(McGuffin.transform.position.x, McGuffin.transform.position.y - 2f, McGuffin.transform.position.z);
-
-            McGuffinEquipped = false;
-        }
-        Transform spawnPoint = SpawnManagerScriptableObject.getSpawnPoint(GetComponent<PlayerNetworkManager>().teamNumber - 1);
-        transform.position = spawnPoint.position;
-        cam.transform.position = spawnPoint.position;
     }
 
     void Attack()
@@ -221,13 +208,6 @@ public class HumanController : InputBehaviour
             bullet.GetComponent<DespawnOnHitOrTime>().CountDownToDestroy();
             bullet.GetComponent<Rigidbody>().velocity = ( targetPoint - transform.position ).normalized * 20;
         }
-    }
-
-    public void pickUpMcGuffin()
-    {
-        McGuffin.transform.position = new Vector3(transform.position.x, transform.position.y + 1.3f, transform.position.z);
-        McGuffin.gameObject.transform.SetParent(this.transform);
-        McGuffinEquipped = true;
     }
 
     private IEnumerator CountdownToAttack()

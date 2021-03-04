@@ -14,7 +14,7 @@ public class SpawnManagerScriptableObject : ScriptableObject, ISerializationCall
 
     public Transform getSpawnPoint(int index)
     {
-        if(index > spawnPoints.Count - 1)
+        if(index >= spawnPoints.Count)
         {
             Debug.LogError("Given index too large for spawnPoints");
             return null;
