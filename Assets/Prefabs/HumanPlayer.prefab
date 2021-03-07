@@ -300,6 +300,36 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &4613536659033593807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6911550608755945831}
+  m_Layer: 0
+  m_Name: ProjectileSpawnPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6911550608755945831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4613536659033593807}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.4, z: 1.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5965565622951725371}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5965565622951725367
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,6 +371,7 @@ Transform:
   - {fileID: 5964600720712472381}
   - {fileID: 9195675064947419267}
   - {fileID: 5429819397391548912}
+  - {fileID: 6911550608755945831}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -426,9 +457,12 @@ MonoBehaviour:
     type: 3}
   model: {fileID: 5966702980191738657}
   deathAura: {fileID: 9195675064965770691}
+  animationController: {fileID: 0}
   nearMcGuffin: 0
   McGuffinEquipped: 0
   nearGoal: 0
+  canAttack: 1
+  projectileSpawnTransform: {fileID: 6911550608755945831}
 --- !u!54 &5965565622951725370
 Rigidbody:
   m_ObjectHideFlags: 0

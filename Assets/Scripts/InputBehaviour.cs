@@ -10,6 +10,7 @@ public class InputBehaviour : MonoBehaviour
         controls = new InputMaster();
         controls.Player.Move.Enable();
         controls.Player.Look.Enable();
+        controls.Player.Fire.Enable();
         controls.Player.WestButton.Enable();
         controls.Player.EastButton.Enable();
         controls.Player.NorthButton.Enable();
@@ -23,6 +24,7 @@ public class InputBehaviour : MonoBehaviour
         controls.Player.Back.Enable();
         controls.Player.LeftStick.Enable();
         controls.Player.RightStick.Enable();
+        controls.Player.Fire.performed += _ => FirePressed();
         controls.Player.WestButton.performed += _ => WestButtonPressed();
         controls.Player.EastButton.performed += _ => EastButtonPressed();
         controls.Player.NorthButton.performed += _ => NorthButtonPressed();
@@ -42,6 +44,11 @@ public class InputBehaviour : MonoBehaviour
         controls.Player.Move.canceled += ctx => Move(Vector2.zero);
         controls.Player.Look.performed += ctx => Look(ctx.ReadValue<Vector2>());
         controls.Player.Look.canceled += ctx => Look(Vector2.zero);
+    }
+
+    protected virtual void FirePressed()
+    {
+        Debug.Log("Fire pressed");
     }
 
     protected virtual void WestButtonPressed()

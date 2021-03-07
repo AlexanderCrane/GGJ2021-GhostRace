@@ -7,7 +7,7 @@ public class DespawnOnHitOrTime : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        CountDownToDestroy();
     }
 
     public void CountDownToDestroy()
@@ -16,6 +16,10 @@ public class DespawnOnHitOrTime : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
+        if (other.transform.tag == "Player")
+        {
+            GetComponent<PlayerNetworkCommands>().Cmd_TakeDamage();
+        }
         Destroy(this.gameObject);
     }
 

@@ -100,6 +100,26 @@ public class PlayerNetworkCommands : NetworkBehaviour
         GetComponent<HumanController>().TakeDamage();
     }
 
+    [Command]
+    public void Cmd_Attack(Vector3 position, Quaternion rotation)
+    {
+        HumanController humanController = GetComponent<HumanController>();
+        if(!humanController.McGuffinEquipped && humanController.canAttack)
+        {
+            humanController.commandAttackReceiver();
+            Rpc_Attack();
+            // Create the bullet and give it a velocity according to the target point computed before
+            GameObject bullet = GameObject.Instantiate(humanController.Projectile, position, rotation);
+            NetworkServer.Spawn(bullet);
+        }
+    }
+
+    [ClientRpc]
+    public void Rpc_Attack()
+    {
+        GetComponent<HumanController>().animationController.SetTrigger("Spell1");
+    }
+
     /// <summary>
     /// Example Command call. Function name MUST start with Cmd.
     /// There may be instances where you do not need to do any checks. Checks are purely for security reasons on the server side.

@@ -12,14 +12,15 @@ public class HumanController : InputBehaviour
     public GameObject Projectile;
     public GameObject model;
     public ParticleSystem deathAura;
+    public Animator animationController;
     public bool nearMcGuffin;
     public bool McGuffinEquipped;
     public bool nearGoal;
+    public bool canAttack = true;
 
     //Private
     Rigidbody rb;
     bool grounded;
-    bool canAttack = true;
     float MoveSpeed = 5f;
     float CameraRotateSpeed = 1f;
     float CameraFollowSpeed = 0.3f;
@@ -27,9 +28,11 @@ public class HumanController : InputBehaviour
     Vector3 velocity = Vector3.zero;
     Vector2 Movement;
     GameObject McGuffin;
-    Animator animationController;
     float lookX = 0f;
     float lookY = 0f;
+
+    [SerializeField]
+    private Transform projectileSpawnTransform;
     // float xRotation = 0f;
 
     // Start is called before the first frame update
@@ -113,10 +116,10 @@ public class HumanController : InputBehaviour
     /// <summary>
     /// Public functions end
     /// </summary>
-
-    protected override void WestButtonPressed()
+/// 
+    protected override void FirePressed()
     {
-        Debug.Log("Attacking");
+        base.FirePressed();
         Attack();
     }
 
@@ -189,24 +192,24 @@ public class HumanController : InputBehaviour
         {
             //TODO: Instantiate bullet and set position and direction, then call network.spawn, and bullet itself moves forward on its own (maybe its personal transform.forward)
 
-            canAttack = false;
-            StartCoroutine(CountdownToAttack());
-            animationController.SetTrigger("Spell1");
-            Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
-            RaycastHit hit;
-            Vector3 targetPoint;
-            if (Physics.Raycast(ray, out hit))
-            {
-                targetPoint = hit.point;
-            }
-            else
-            {
-                targetPoint = ray.GetPoint( 1000 ) ; // May need to change this value according to needs
-            }
-            // Create the bullet and give it a velocity according to the target point computed before
-            GameObject bullet = GameObject.Instantiate(Projectile, transform.TransformPoint(Vector3.forward * 1.1f) , transform.rotation);
-            bullet.GetComponent<DespawnOnHitOrTime>().CountDownToDestroy();
-            bullet.GetComponent<Rigidbody>().velocity = ( targetPoint - transform.position ).normalized * 20;
+            Quaternion projectileSpawnRotation = Quaternion.FromToRotation(Vector3.up, this.transform.position - projectileSpawnTransform.position);
+            GetComponent<PlayerNetworkCommands>().Cmd_Attack(projectileSpawnTransform.position, cam.transform.rotation);
+
+            
+            // Ray ray = cam.ViewportPointToRay(new Vector3(0.5F, 0.5F, 0));
+            // RaycastHit hit;
+            // Vector3 targetPoint;
+            // if (Physics.Raycast(ray, out hit))
+            // {
+            //     targetPoint = hit.point;
+            // }
+            // else
+            // {
+            //     targetPoint = ray.GetPoint( 1000 ) ; // May need to change this value according to needs
+            // }
+            // // Create the bullet and give it a velocity according to the target point computed before
+            // GameObject bullet = GameObject.Instantiate(Projectile, transform.TransformPoint(Vector3.forward * 1.1f) , transform.rotation);
+            // bullet.GetComponent<Rigidbody>().velocity = ( targetPoint - transform.position ).normalized * 20;
         }
     }
 
@@ -214,5 +217,11 @@ public class HumanController : InputBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         canAttack = true;
+    }
+
+    public void commandAttackReceiver()
+    {
+        canAttack = false;
+        StartCoroutine(CountdownToAttack());
     }
 }
