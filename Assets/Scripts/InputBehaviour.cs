@@ -104,9 +104,19 @@ public class InputBehaviour : MonoBehaviour
         Debug.Log("Start pressed");
     }
 
-    protected virtual void BackPressed()
+    private void BackPressed()
     {
         Debug.Log("Back pressed");
+        if (Cursor.visible)
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
     }
 
     protected virtual void LeftStickPressed()

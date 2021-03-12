@@ -21,6 +21,8 @@ public class LobbyPlayerNetworkManager : NetworkBehaviour
         base.OnStartLocalPlayer();
         if (GetComponent<NetworkIdentity>().isLocalPlayer)
         {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             enableComponents();
         }
     }

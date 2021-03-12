@@ -26,6 +26,8 @@ public class PlayerNetworkManager : NetworkBehaviour
         base.OnStartLocalPlayer();
         if (isLocalPlayer)
         {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
             initializeLocalPlayer();
         }
     }

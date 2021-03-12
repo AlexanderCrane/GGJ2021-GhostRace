@@ -53,7 +53,6 @@ public class TeamSelectionManager : NetworkBehaviour
                 Rpc_SetButtonInteractable(convertListToArray());
                 break;
             case SyncList<bool>.Operation.OP_SET:
-                Debug.Log("value set");
                 Rpc_SetButtonInteractable(convertListToArray());
                 break;
             default:

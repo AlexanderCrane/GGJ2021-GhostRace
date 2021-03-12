@@ -20,8 +20,6 @@ public class GhostController : InputBehaviour {
     float lookY = 0f;
 
     float xRotation = 0f;
-    bool canActivate;
-    GameObject nearbyTrap;
 
     // Start is called before the first frame update
     void Start() {
@@ -49,20 +47,6 @@ public class GhostController : InputBehaviour {
 
         // using force because I want floaty movement for the ghost
         body.AddRelativeForce(moveD, ForceMode.Impulse);
-
-    }
-
-    private void OnTriggerEnter(Collider other) {
-        if(other.gameObject.tag == "trap"){
-            canActivate = true;
-            nearbyTrap = other.gameObject;
-        }
-    }
-
-    private void OnTriggerExit(Collider other) {
-        if(other.gameObject.tag == "trap"){
-            nearbyTrap = null;
-        }
     }
 
     protected override void Look(Vector2 looking) {
@@ -74,13 +58,9 @@ public class GhostController : InputBehaviour {
         magnitude = movement;
     }
 
-    protected override void WestButtonPressed()
+    protected override void FirePressed()
     {
-        if(canActivate && nearbyTrap != null)
-        {
-            GetComponent<PlayerNetworkCommands>().Cmd_ActivateTrap(nearbyTrap);
-            // nearbyTrap.GetComponent<TrapActivate>().Activate();
-        }
+        GetComponent<PlayerNetworkCommands>().Cmd_ActivateTrap();
     }
 
     protected override void RightBumperPressed() => up = 1f;

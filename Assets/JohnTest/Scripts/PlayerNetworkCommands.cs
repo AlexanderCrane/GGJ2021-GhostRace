@@ -18,9 +18,27 @@ public class PlayerNetworkCommands : NetworkBehaviour
     }
     
     [Command]
-    public void Cmd_ActivateTrap(GameObject trap)
+    public void Cmd_ActivateTrap()
     {
-        trap.GetComponent<TrapActivate>().Rpc_Activate();
+        GameObject closestTrap = null;
+        float closestDistance = 999.0f;
+        Vector3 point1 = transform.position + Vector3.up;
+        Vector3 point2 = transform.position + Vector3.down;
+
+        RaycastHit[] hits = Physics.CapsuleCastAll(point1, point2, 0.5f, transform.forward, 0);
+        for (int i = 0; i < hits.Length; i++)
+        {
+            if (hits[i].transform.tag == "trap" && hits[i].transform.GetComponent<TrapActivate>() != null && hits[i].distance < closestDistance)
+            {
+                closestDistance = hits[i].distance;
+                closestTrap = hits[i].transform.gameObject;
+            }
+        }
+
+        if (closestTrap != null)
+        {
+            closestTrap.GetComponent<TrapActivate>().Rpc_Activate();
+        }
     }
 
     [Command]

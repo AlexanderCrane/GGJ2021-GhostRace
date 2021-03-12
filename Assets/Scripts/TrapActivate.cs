@@ -9,6 +9,8 @@ public class TrapActivate : NetworkBehaviour
 
     Animation anim;
 
+    bool canActivate = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class TrapActivate : NetworkBehaviour
 
     public void Activate()
     {
+        canActivate = false;
         anim.Play();
         StartCoroutine(CountdownToStop());
     }
@@ -29,11 +32,16 @@ public class TrapActivate : NetworkBehaviour
     {
         yield return new WaitForSeconds(2f);
         anim.Stop();
+        yield return new WaitForSeconds(2f);
+        canActivate = true;
     }
 
     [ClientRpc]
     public void Rpc_Activate()
     {
-        Activate();
+        if (canActivate)
+        {
+            Activate();
+        }
     }
 }

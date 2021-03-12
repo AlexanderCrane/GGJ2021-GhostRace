@@ -123,21 +123,13 @@ public class HumanController : InputBehaviour
         Attack();
     }
 
-    protected override void EastButtonPressed()
-    {
-        // GetComponent<PlayerNetworkCommands>().Cmd_TakeDamage();
-    }
-
     protected override void NorthButtonPressed()
     {
-        Debug.Log("North button pressed");
-
         GetComponent<PlayerNetworkCommands>().Cmd_InteractWithMcGuffin();
     }
 
     protected override void SouthButtonPressed()
     {
-        Debug.Log("Confirm/South button pressed");
         if(grounded)
         {
             rb.AddForce(new Vector3(0,300f,0));
