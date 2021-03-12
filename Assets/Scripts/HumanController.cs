@@ -21,7 +21,7 @@ public class HumanController : InputBehaviour
     //Private
     Rigidbody rb;
     bool grounded;
-    float MoveSpeed = 5f;
+    float MoveSpeed = 7.5f;
     float CameraRotateSpeed = 1f;
     float CameraFollowSpeed = 0.3f;
     Vector2 CameraRotation;
@@ -125,7 +125,7 @@ public class HumanController : InputBehaviour
 
     protected override void EastButtonPressed()
     {
-        GetComponent<PlayerNetworkCommands>().Cmd_TakeDamage();
+        // GetComponent<PlayerNetworkCommands>().Cmd_TakeDamage();
     }
 
     protected override void NorthButtonPressed()

@@ -54,36 +54,42 @@ public class PlayerNetworkCommands : NetworkBehaviour
     }
     
     private void OnCollisionEnter(Collision other) {
-        if(other.gameObject.tag == "trap")
+        if(other.gameObject.tag == "trap" && this.tag == "Player")
         {
             Rpc_TakeDamage();
         }
     }
 
     private void OnTriggerEnter(Collider other) {
-        switch(other.gameObject.tag)
+        if (this.gameObject.tag == "Player")
         {
-            case "mcguffin":
-                humanController.nearMcGuffin = true;
-                break;
-            case "bullet":
-                Rpc_TakeDamage();
-                break;
-            case "Finish":
-                humanController.nearGoal = true;
-                break;
+            switch(other.gameObject.tag)
+            {
+                case "mcguffin":
+                    humanController.nearMcGuffin = true;
+                    break;
+                case "bullet":
+                    Rpc_TakeDamage();
+                    break;
+                case "Finish":
+                    humanController.nearGoal = true;
+                    break;
+            }
         }
     }
 
     private void OnTriggerExit(Collider other) {
-        switch(other.gameObject.tag)
+        if (this.gameObject.tag == "Player")
         {
-            case "mcguffin":
-                humanController.nearMcGuffin = false;
-                break;
-            case "Finish":
-                humanController.nearGoal = false;
-                break;
+            switch(other.gameObject.tag)
+            {
+                case "mcguffin":
+                    humanController.nearMcGuffin = false;
+                    break;
+                case "Finish":
+                    humanController.nearGoal = false;
+                    break;
+            }
         }
     }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 851378970}
   - component: {fileID: 851378972}
   - component: {fileID: 851378971}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: RawImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 1768830237}
   - component: {fileID: 1768830236}
   - component: {fileID: 1768830235}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6511192373955663654}
   - component: {fileID: 655295534980351612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Theme_ghosts
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 7165459940979629456}
   - component: {fileID: 7165459940979629457}
   - component: {fileID: 7165459940979629470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GhostBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 3352771543975427959}
   - component: {fileID: 34869406224288417}
   - component: {fileID: 3001670508745545021}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ghost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -560,7 +560,7 @@ GameObject:
   - component: {fileID: 1228590789314985074}
   - component: {fileID: 777965603305360745}
   - component: {fileID: 9039791993301998244}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerEyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -728,9 +728,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7165459942357794371}
     m_Modifications:
+    - target: {fileID: 100000, guid: db50ab1c866680e4bb870bf5eb72dd3d, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: db50ab1c866680e4bb870bf5eb72dd3d, type: 3}
       propertyPath: m_Name
       value: CFX4 Disruptive Force
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: db50ab1c866680e4bb870bf5eb72dd3d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: db50ab1c866680e4bb870bf5eb72dd3d, type: 3}
       propertyPath: m_LocalPosition.x

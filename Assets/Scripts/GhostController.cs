@@ -6,7 +6,7 @@ using UnityEngine;
 public class GhostController : InputBehaviour {
     public NetworkManagerScriptableObject networkManagerScriptableObject;
     public Camera GhostEyes;
-    public float moveSpeed = 1.0f;
+    public float moveSpeed = 2.0f;
 
     private Rigidbody body;
 
